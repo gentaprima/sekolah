@@ -18,11 +18,9 @@
 <ul class="nav navbar-nav mainmenu">
 <li class="active"><a href="#home_page">Home</a></li>
 <li><a href="#about_page">About</a></li>
-<li><a href="#features_page">Features</a></li>
-<li><a href="#gallery_page">Gallery</a></li>
- <li><a href="#price_page">Pricing</a></li>
+<li><a href="#prosedur_page">Prosedur Mutasi</a></li>
 <li><a href="#questions_page">FAQ</a></li>
-<li><a href="blog.html">Blog</a></li>
+<li><a href="#gallery_page">Gallery</a></li>
 <li><a href="#contact_page">Contacts</a></li>
 </ul>
 <?php if($this->session->userdata('username')==null){ ?>
