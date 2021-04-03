@@ -17,9 +17,9 @@
                 "active_login" => "active",
                 "title" => "Login" 
             );
-            $this->load->view('dashboard/layout/header',$data);
+            $this->load->view('home/layout/header',$data);
             $this->load->view('login/login');
-            $this->load->view('dashboard/layout/footer');
+            $this->load->view('home/layout/footer');
             
         }
         public function login_process(){
@@ -29,7 +29,6 @@
 
             if($username != null && $password != null){
                 $data = $this->ModelUsers->getDataByUsername($username);
-
                 if($data != null){
                     $db_password = $data['password'];
                     if(password_verify($password,$db_password)){
@@ -52,19 +51,19 @@
                         $this->session->set_flashdata("pesan","Password Salah");
                         $this->session->set_flashdata("title","Login Gagal!!");
                         $this->session->set_flashdata("type","warning");
-                        redirect(base_url('login'));
+                        redirect(base_url());
                     }
                 }else{
                     $this->session->set_flashdata("pesan","Username atau Email tidak ditemukan");
                     $this->session->set_flashdata("title","Login Gagal !!");
                     $this->session->set_flashdata("type","warning");
-                    redirect(base_url('login'));
+                    redirect(base_url());
                 }
             }else{
                 $this->session->set_flashdata("pesan","Username dan Password Tidak Boleh Kosong");
                 $this->session->set_flashdata("title","Login Gagal !!");
                 $this->session->set_flashdata("type","warning");
-                redirect(base_url('login'));
+                redirect(base_url());
             }
         }
     }
