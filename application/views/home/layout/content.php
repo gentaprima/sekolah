@@ -174,39 +174,86 @@
 
 
 <section class="gallery-area section-padding" id="gallery_page">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 gallery-slider">
-                <div class="gallery-slide">
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-1.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-2.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-3.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-4.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-1.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-2.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-3.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-1.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-2.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-3.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-4.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-1.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-2.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-3.jpg" alt=""></div>
+            <div class="col-xs-12">
+                <div class="page-title text-center">
+                    <h5 class="title color-white" style="color: white;font-size:18px;">GALERI</h5>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-5 col-lg-3">
-                <div class="page-title">
-                    <h5 class="white-color title wow fadeInUp" data-wow-delay="0.2s">Screenshots</h5>
-                    <div class="space-10"></div>
-                    <h3 class="white-color wow fadeInUp" data-wow-delay="0.4s">Screenshot 01</h3>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="team-slide">
+                    <div class="team-box bg-white">
+
+                        <img src="<?= base_url() ?>assets/home/images/sekolah_home.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img src="<?= base_url() ?>assets/home/images/cacad.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img style="height: 218px;" src="<?= base_url() ?>assets/home/images/upacara.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img style="height: 218px;" src="<?= base_url() ?>assets/home/images/upacara2.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img style="height: 218px;" src="<?= base_url() ?>assets/home/images/polisi.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img style="height: 218px;" src="<?= base_url() ?>assets/home/images/pramuka.jpeg" alt="">
+                    </div>
                 </div>
-                <div class="space-20"></div>
-                <div class="desc wow fadeInUp" data-wow-delay="0.6s">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
-                </div>
-                <div class="space-50"></div>
-                <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
             </div>
         </div>
     </div>
 </section>
+<footer class="footer-area" id="contact_page">
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title text-center">
+                        <h5 class="title">KONTAK KAMI</h5>
+                        <h3 class="dark-color">Temukan Kami Dengan Detail Di Bawah</h3>
+                        <div class="space-60"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-map-marker"></span>
+                        </div>
+                        <p>Jl. BB No.1, Cipinang Muara, Jatinegara, RT.6/RW.15, Cipinang Muara, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13420</p>
+                    </div>
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-phone-handset"></span>
+                        </div>
+                        <p>(021) 8199858</p>
+                    </div>
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-envelope"></span>
+                        </div>
+                        <p>smpn148@yahoo.co.id
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
