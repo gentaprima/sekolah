@@ -214,3 +214,46 @@
     </div>
 
 </section>
+<footer class="footer-area" id="contact_page">
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="page-title text-center">
+                        <h5 class="title">KONTAK KAMI</h5>
+                        <h3 class="dark-color">Temukan Kami Dengan Detail Di Bawah</h3>
+                        <div class="space-60"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-map-marker"></span>
+                        </div>
+                        <p>Jl. BB No.1, Cipinang Muara, Jatinegara, RT.6/RW.15, Cipinang Muara, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13420</p>
+                    </div>
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-phone-handset"></span>
+                        </div>
+                        <p>(021) 8199858</p>
+                    </div>
+                    <div class="space-30 hidden visible-xs"></div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="footer-box">
+                        <div class="box-icon">
+                            <span class="lnr lnr-envelope"></span>
+                        </div>
+                        <p>smpn148@yahoo.co.id
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
