@@ -1,5 +1,47 @@
 <footer class="footer-area" id="contact_page">
- 
+  <div class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-title text-center">
+            <h5 class="title">Contact US</h5>
+            <h3 class="dark-color">Find Us By Bellow Details</h3>
+            <div class="space-60"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="footer-box">
+            <div class="box-icon">
+              <span class="lnr lnr-map-marker"></span>
+            </div>
+            <p>8-54 Paya Lebar Square <br /> 60 Paya Lebar Roa SG, Singapore</p>
+          </div>
+          <div class="space-30 hidden visible-xs"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="footer-box">
+            <div class="box-icon">
+              <span class="lnr lnr-phone-handset"></span>
+            </div>
+            <p>+65 93901336 <br /> +65 93901337</p>
+          </div>
+          <div class="space-30 hidden visible-xs"></div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="footer-box">
+            <div class="box-icon">
+              <span class="lnr lnr-envelope"></span>
+            </div>
+            <p><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a53455f58474b43466a4d474b434604494547">[email&#160;protected]</a> <br /> <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d0f0c0e061d041d081f430e02002d0a000c0401430e0200">[email&#160;protected]</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="footer-bottom">
     <div class="container">
       <div class="row">
