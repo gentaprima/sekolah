@@ -3,18 +3,19 @@
         <div class="row">
             <div class="col-xs-12 hidden-sm col-md-5">
                 <figure class="mobile-image wow fadeInUp" data-wow-delay="0.2s">
-                    <img src="<?= base_url() ?>assets/home/images/header-mobile.png" alt="">
+                    <img src="<?= base_url() ?>assets/home/images/school1.svg" alt="">
                 </figure>
             </div>
             <div class="col-xs-12 col-md-7">
+            
                 <div class="space-80 hidden-xs"></div>
-                <h1 class="wow fadeInUp" data-wow-delay="0.4s">Start your amazing stuff through appy.</h1>
+                <h1 class="wow fadeInUp" data-wow-delay="0.4s">SMPN 148 JAKARTA</h1>
                 <div class="space-20"></div>
                 <div class="desc wow fadeInUp" data-wow-delay="0.6s">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
                 </div>
+                <h4 style="padding-bottom: 150px;">Cerdas dan beriman adalah simbol generasi muda bangsa Indonesia..</h4>
                 <div class="space-20"></div>
-                <a href="#" class="bttn-white wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-download"></i>Download App</a>
+              
             </div>
         </div>
     </div>
@@ -25,20 +26,21 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-10 col-md-offset-1">
+            
                 <div class="page-title text-center">
-                    <img src="<?= base_url() ?>assets/home/images/about-logo.png" alt="About Logo">
+                <img src="<?= base_url() ?>assets/home/images/about-logo.png" alt="About Logo">
                     <div class="space-20"></div>
-                    <h5 class="title">About Appy</h5>
+                    <h5 style="font-size: 36px;"" class="title">Selamat Datang Di SMPN 148 JAKARTA</h5>
                     <div class="space-30"></div>
-                    <h3 class="blue-color">A beautiful app for consectetur adipisicing elit, sed do eiusmod tempor incididunt ut mollit anim id est laborum. Sedut perspiciatis unde omnis. </h3>
+                    <h3 class="black-color" style="font-size: 20px;">SMPN 148 Jakarta atau nama sempurnanya Sekolah Menengah Pertama Negeri 148 Jakarta merupakan sebuah Sekolah Menengah Pertama Negeri yang terletak di Jl. Bb I, Cipinang Muara Jakarta Timur, Indonesia. Sekolah Menengah Pertama Negeri 148 Jakarta memiliki kod NPSN 20103512. </h3>
+                    <hr>
                     <div class="space-20"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 <section class="feature-area section-padding-top" id="prosedur_page">
     <div class="container">

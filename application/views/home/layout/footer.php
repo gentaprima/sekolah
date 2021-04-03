@@ -1,6 +1,4 @@
-
-
-  <div class="footer-bottom">
+<div class="footer-bottom">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-5">
