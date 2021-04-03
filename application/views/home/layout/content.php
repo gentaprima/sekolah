@@ -42,7 +42,6 @@
     </div>
 </section>
 
-
 <section class="feature-area section-padding-top" id="prosedur_page">
     <div class="container">
         <div class="row">
@@ -177,42 +176,45 @@
 
 
 <section class="gallery-area section-padding" id="gallery_page">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 gallery-slider">
-                <div class="gallery-slide">
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-1.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-2.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-3.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-4.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-1.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-2.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-3.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-1.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-2.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-3.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-4.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-1.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-2.jpg" alt=""></div>
-                    <div class="item"><img src="<?= base_url() ?>assets/home/images/gallery-3.jpg" alt=""></div>
+            <div class="col-xs-12">
+                <div class="page-title text-center">
+                    <h5 class="title color-white" style="color: white;font-size:18px;">GALERI</h5>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-5 col-lg-3">
-                <div class="page-title">
-                    <h5 class="white-color title wow fadeInUp" data-wow-delay="0.2s">Screenshots</h5>
-                    <div class="space-10"></div>
-                    <h3 class="white-color wow fadeInUp" data-wow-delay="0.4s">Screenshot 01</h3>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="team-slide">
+                    <div class="team-box bg-white">
+
+                        <img src="<?= base_url() ?>assets/home/images/sekolah_home.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img src="<?= base_url() ?>assets/home/images/cacad.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img style="height: 218px;" src="<?= base_url() ?>assets/home/images/upacara.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img style="height: 218px;" src="<?= base_url() ?>assets/home/images/upacara2.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img style="height: 218px;" src="<?= base_url() ?>assets/home/images/polisi.jpg" alt="">
+                    </div>
+                    <div class="team-box bg-white">
+
+                        <img style="height: 218px;" src="<?= base_url() ?>assets/home/images/pramuka.jpeg" alt="">
+                    </div>
                 </div>
-                <div class="space-20"></div>
-                <div class="desc wow fadeInUp" data-wow-delay="0.6s">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt ut labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
-                </div>
-                <div class="space-50"></div>
-                <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
             </div>
         </div>
     </div>
-
 </section>
 <footer class="footer-area" id="contact_page">
     <div class="section-padding">
