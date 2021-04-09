@@ -62,4 +62,14 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="<?= base_url()?>assets/admin/js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- x-editor CSS
+		============================================ -->
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/editor/select2.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/editor/datetimepicker.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/editor/bootstrap-editable.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/editor/x-editor-style.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/data-table/bootstrap-table.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/data-table/bootstrap-editable.css">
 </head>
