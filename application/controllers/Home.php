@@ -7,9 +7,50 @@ Class Home extends CI_Controller{
 
     }
     public function index(){
-        $this->load->view('home/layout/header');
+        $data = array(
+            "active_home" => "active",
+            "title" => "SMPN 148 Jakarta"
+        );
+        $this->load->view('home/layout/header',$data);
         $this->load->view('home/layout/navbar');
         $this->load->view('home/layout/content');
         $this->load->view('home/layout/footer');
     }
+    public function pendaftaran(){
+
+        $data = array(
+
+            "active_pendaftaran" => "active",
+            "title" => "Pendaftaran"
+        );
+        $this->load->view('home/layout/header',$data);
+        $this->load->view('home/layout/navbar');
+        $this->load->view('home/data/pendaftaran');
+        $this->load->view('home/layout/footer');
+    }
+    public function biodata(){
+
+        $data = array(
+
+            "active_biodata" => "active",
+            "title" => "Pendaftaran"
+        );
+        $this->load->view('home/layout/header',$data);
+        $this->load->view('home/layout/navbar');
+        $this->load->view('home/data/');
+        $this->load->view('home/layout/footer');
+    }
+    public function hasil(){
+
+        $data = array(
+
+            "active_hasil" => "active",
+            "title" => "Pendaftaran"
+        );
+        $this->load->view('home/layout/header',$data);
+        $this->load->view('home/layout/navbar');
+        $this->load->view('home/data/');
+        $this->load->view('home/layout/footer');
+    }
+
 }

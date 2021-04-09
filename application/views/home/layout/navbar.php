@@ -16,12 +16,33 @@
             </div>
             <div class="collapse navbar-collapse" id="primary_menu">
                 <ul class="nav navbar-nav mainmenu">
-                    <li class="active"><a href="#home_page">Home</a></li>
-                    <li><a href="#about_page">About</a></li>
-                    <li><a href="#prosedur_page">Prosedur Mutasi</a></li>
-                    <li><a href="#questions_page">FAQ</a></li>
-                    <li><a href="#gallery_page">Gallery</a></li>
-                    <li><a href="#contact_page">Contacts</a></li>
+                    <?php if(isset($active_home)) { ?>
+                    <li class="active"><a href="<?= base_url() ?>home/index">Home</a></li>
+                    <?php }else{ ?>
+                    <li class=""><a href="<?= base_url() ?>home/index">Home</a></li>
+                    <?php } ?>
+                    <?php if(isset($active_pendaftaran)) { ?>
+                    <li class="active"><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
+                    <?php }else{ ?>
+                    <li class=""><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
+                    <?php } ?>
+                    <li class=""><a href="">Tentang Sekolah</a></li>
+                    <li class=""><a href="">Visi/Misi</a></li>
+                    <?php if($this->session->userdata('username')!= null) { ?>
+                        <?php if(isset($active_biodata)) { ?>
+                    <li class="active"><a href="">Biodata</a></li>
+                    <?php }else{ ?>
+                        <li class=""><a href="">Biodata</a></li>
+                    <?php } ?>
+                    <?php } ?>
+                    <?php if($this->session->userdata('username')!= null) { ?>
+                        <?php if(isset($active_hasil)) { ?>
+                    <li class="active"><a href="">Hasil</a></li>
+                    <?php }else{ ?>
+                        <li class=""><a href="">Hasil</a></li>
+                        <?php } ?>
+                        <?php } ?>
+                    
                 </ul>
                 <?php if ($this->session->userdata('username') == null) { ?>
                     <div class="right-button hidden-xs">

@@ -131,43 +131,61 @@
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <div class="toggole-boxs">
-                    <h3>Faq first question goes here? </h3>
+                    <h3 style="font-weight: bold;">Umum </h3>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p style="font-weight: bold;">Deskripsi SMP Negeri 148 Jakarta ?</p>
+                        <p>SMPN 148 Jakarta atau nama sempurnanya Sekolah Menengah Pertama Negeri 148 Jakarta merupakan sebuah Sekolah Menengah Pertama Negeri yang terletak di Jl. Bb I, Cipinang Muara Jakarta Timur, Indonesia. Sekolah Menengah Pertama Negeri 148 Jakarta memiliki kod NPSN 20103512</p>
+
+                        <p style="font-weight: bold;">Dimana Letak SMP Negeri 148 Jakarta ?</p>
+                        <p>Jl. BB No.1, Cipinang Muara, Jatinegara, RT.6/RW.15, Cipinang Muara, Kecamatan Jatinegara, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13420</p>
                     </div>
-                    <h3>About freewuent question goes here? </h3>
+                    <h3 style="font-weight: bold;">Penerimaan</h3>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p style="font-weight: bold;">Bagaimanakah cara penerimaan peserta didik pindahan ?</p>
+                        <p>Penerimaan siswa pindahan pada SMP Negeri 148 Jakarta dapat dilakukan secara online maupun offline</p>
                     </div>
-                    <h3>Why more question goes here? </h3>
+                    <h3 style="font-weight: bold;">Kurikulum</h3>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p style="font-weight: bold;">Kurikulum apa yang digunakan ?</p>
+                        <p>SMP Negeri 148 Jakarta Menggunakan Kurikulum 2013</p>
                     </div>
-                    <h3>What question goes here? </h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    </div>
+
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <div class="space-20 hidden visible-xs"></div>
                 <div class="toggole-boxs">
-                    <h3>Faq second question goes here? </h3>
+                    <h3 style="font-weight: bold;">Ekskul </h3>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p style="font-weight: bold;">Apa saja ekskul yang terdapat pada SMP Negeri 148 Jakarta ?</p>
+                        <ul>
+                        
+                        <li>Futsal</li>
+                        <li>Bola Basket</li>
+                        <li>Voli</li>
+                        <li>Pramuka</li>
+                        <li>Badminton</li>
+                        </ul>
+                       
                     </div>
-                    <h3>Third faq question goes here? </h3>
+                    <h3 style="font-weight: bold;">Beasiswa </h3>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p style="font-weight: bold;">Apakah ada program beasiswa prestasi ?</p>
+                        <p>Beasiswa Khusus</p>
+                        <ul>
+                            <li>Siswa beasiswa khusus adalah siswa yang kurang mampu dan yang memiliki prestasi.</li>
+                            <li>Siswa beasiswa khusus menunjukkan surat keterangan kurang mampu dan piagam prestasinya</li>
+                            <li>Piagam prestasi bersifat individu bukan tim</li>
+                            <li>Presentasi kuota beasiswa khusus adalah 2% ( 2 orang)</li>
+                            <li>Beasiswa yang diberikan adalah beasiswa penuh terkait SPP, kegiatan , sarana prasarana</li>
+                        </ul>
                     </div>
-                    <h3>Why more question goes here? </h3>
+                    <h3 style="font-weight: bold;">Sistem Keamanan</h3>
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p style="font-weight: bold;">Apakah sekolah memiliki sistem keamanan yang baik ?</p>
+                        <p>Sekolah sadar akan pentingnya keamanan dan keselamatan siswa. Ada kebijakan dan praktek untuk mendukung hal ini. Semua pengunjung harus melaporkan ke satpam pada saat kedatangan. Kami juga memiliki sistem pemantauan CCTV yang dipasang di tempat-tempat strategis di sekitar Sekolah. Selain itu, kami juga memiliki banyak penjaga keamanan yang ditempatkan di seluruh halaman sekolah untuk memastikan keamanan tambahan.</p>
                     </div>
-                    <h3>Seventh frequent question here? </h3>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    </div>
+
                 </div>
             </div>
         </div>
