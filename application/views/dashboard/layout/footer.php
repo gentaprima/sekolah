@@ -73,6 +73,41 @@
 		============================================ -->
     <script src="<?= base_url()?>assets/admin/js/tawk-chat.js"></script>
     <script src="<?= base_url()?>assets/admin/js/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- data table JS
+		============================================ -->
+    <script src="<?= base_url() ?>assets/admin/js/data-table/bootstrap-table.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/data-table/tableExport.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/data-table/data-table-active.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/data-table/bootstrap-table-editable.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/data-table/bootstrap-editable.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/data-table/bootstrap-table-resizable.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/data-table/colResizable-1.5.source.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/data-table/bootstrap-table-export.js"></script>
+    <!--  editable JS
+		============================================ -->
+    <script src="<?= base_url() ?>assets/admin/js/editable/jquery.mockjax.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/editable/mock-active.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/editable/select2.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/editable/moment.min.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/editable/bootstrap-datetimepicker.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/editable/bootstrap-editable.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/editable/xediable-active.js"></script>
+    <!-- Chart JS
+		============================================ -->
+    <script src="<?= base_url() ?>assets/admin/js/chart/jquery.peity.min.js"></script>
+    <script src="<?= base_url() ?>assets/admin/js/peity/peity-active.js"></script>
+    <!-- tab JS
+		============================================ -->
+    <script src="<?= base_url() ?>assets/admin/js/tab.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="<?= base_url() ?>assets/admin/js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="<?= base_url() ?>assets/admin/js/main.js"></script>
+    <!-- tawk chat JS
+		============================================ -->
+    <script src="<?= base_url() ?>assets/admin/js/tawk-chat.js"></script>
 </body>
 
 </html>
