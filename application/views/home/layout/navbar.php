@@ -27,7 +27,11 @@
                     <li class=""><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
                     <?php } ?>
                     <li class=""><a href="">Tentang Sekolah</a></li>
-                    <li class=""><a href="">Visi/Misi</a></li>
+                    <?php if(isset($active_visi)) { ?>
+                    <li class="active"><a href="<?= base_url() ?>home/visi">Visi / Misi</a></li>
+                    <?php }else{ ?>
+                    <li class=""><a href="<?= base_url() ?>home/visi">Visi / Misi</a></li>
+                    <?php } ?>
                     <?php if($this->session->userdata('username')!= null) { ?>
                         <?php if(isset($active_biodata)) { ?>
                     <li class="active"><a href="">Biodata</a></li>
