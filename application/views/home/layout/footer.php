@@ -1,29 +1,29 @@
 <div class="footer-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-5">
 
-          <span>Copyright &copy;
-              <?= date('Y') ?> All rights reserved | SMP 148 Jakarta
-          </span>
+        <span>Copyright &copy;
+          <?= date('Y') ?> All rights reserved | SMP 148 Jakarta
+        </span>
 
-          <div class="space-30 hidden visible-xs"></div>
-        </div>
-        <div class="col-xs-12 col-md-7">
-          <div class="footer-menu">
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Testimonial</a></li>
-              <li><a href="#">Contacts</a></li>
-            </ul>
-          </div>
+        <div class="space-30 hidden visible-xs"></div>
+      </div>
+      <div class="col-xs-12 col-md-7">
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 </footer>
 
@@ -39,6 +39,8 @@
 <script src="<?= base_url() ?>assets/home/js/wow.min.js"></script>
 
 <script src="<?= base_url() ?>assets/home/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script> -->
 <!-- <script>
