@@ -12,7 +12,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="<?= base_url() ?>assets/home/images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand" href="#"><img src="<?= base_url() ?>assets/admin/img/logoo.png" alt="Logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="primary_menu">
                 <ul class="nav navbar-nav mainmenu">
