@@ -1,3 +1,8 @@
+<?php if($this->session->flashdata('pesan')) { ?>
+<p style="display: none;" id="pesan"><?= $this->session->flashdata('pesan')?></p>
+<p style="display: none;" id="type"><?= $this->session->flashdata('type')?></p>
+<p  style="display: none;" id="title"><?= $this->session->flashdata('title')?></p>
+<?php }?>
 <body data-spy="scroll" data-target=".mainmenu-area">
 
     <div class="preloader">
