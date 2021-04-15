@@ -20,6 +20,7 @@
                 </center>
                 <div class="col-md-6">
                 <div class="form-group row mt-4">
+                <form action="<?= base_url()?>pendaftaran/process_pendaftaran" method="post" enctype="multipart/form-data">
                         <label for="" class="col-sm-3 col-form-label">NISN</label>
                         <div class="col-sm-9">
                             <input type="text" value="" id="" name="nis" class="form-control">
@@ -28,7 +29,7 @@
                     <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Foto NISN</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="file" name="foto_nis" id="formFile">
+                            <input class="form-control" type="file" name="bukti_nis" id="formFile">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -124,13 +125,13 @@
                 <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Akte Kelahiran</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="file" name="" id="formFile">
+                            <input class="form-control" type="file" name="akte" id="formFile">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Kartu Keluarga</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="file" name="" id="formFile">
+                            <input class="form-control" type="file" name="kartu_keluarga" id="formFile">
                         </div>
                     </div>
                 </div>
@@ -139,7 +140,7 @@
                     <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Ijazah</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="file" name="" id="formFile">
+                            <input class="form-control" type="file" name="ijazah" id="formFile">
                         </div>
                     </div>
                   
@@ -148,12 +149,12 @@
             </div>
             <div class="d-grid gap-2 d-md-block">
                 <center>
-                    <button  class="btn btn-primary" type="button">Daftar</button>
+                    <button  class="btn btn-primary" type="submit">Daftar</button>
                     <button  class="btn btn-outline-danger" onClick="back(3)" type="button">Kembali</button>
                 </center>
             </div>
         </div>
-
+</form>
     </div>
 </div>
 
