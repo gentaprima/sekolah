@@ -64,5 +64,15 @@ Class Home extends CI_Controller{
         $this->load->view('home/visi/visi');
         $this->load->view('home/layout/footer');
     }
+    public function about_school(){
+        $data = array(
 
+            "active_about" => "active",
+            "title" => "Tentang Sekolah"
+        );
+        $this->load->view('home/layout/header',$data);
+        $this->load->view('home/layout/navbar');
+        $this->load->view('home/about_school/aboutSchool');
+        $this->load->view('home/layout/footer');
+    }
 }
