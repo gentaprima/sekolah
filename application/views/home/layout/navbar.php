@@ -1,3 +1,8 @@
+<?php if($this->session->flashdata('pesan')) { ?>
+<p style="display: none;" id="pesan"><?= $this->session->flashdata('pesan')?></p>
+<p style="display: none;" id="type"><?= $this->session->flashdata('type')?></p>
+<p  style="display: none;" id="title"><?= $this->session->flashdata('title')?></p>
+<?php }?>
 <body data-spy="scroll" data-target=".mainmenu-area">
 
     <div class="preloader">
@@ -26,8 +31,16 @@
                     <?php }else{ ?>
                     <li class=""><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
                     <?php } ?>
-                    <li class=""><a href="">Tentang Sekolah</a></li>
-                    <li class=""><a href="">Visi/Misi</a></li>
+                    <?php if(isset($active_about)){?>
+                    <li class="active"><a href="<?= base_url()?>home/about_school">Tentang Sekolah</a></li>
+                    <?php }else{?>
+                    <li class=""><a href="<?= base_url()?>home/about_school">Tentang Sekolah</a></li>
+                    <?php }?>
+                    <?php if(isset($active_visi)) { ?>
+                    <li class="active"><a href="<?= base_url() ?>home/visi">Visi / Misi</a></li>
+                    <?php }else{ ?>
+                    <li class=""><a href="<?= base_url() ?>home/visi">Visi / Misi</a></li>
+                    <?php } ?>
                     <?php if($this->session->userdata('username')!= null) { ?>
                         <?php if(isset($active_biodata)) { ?>
                     <li class="active"><a href="">Biodata</a></li>
