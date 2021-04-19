@@ -47,11 +47,10 @@
 											<option value="selected">Export Selected</option>
 										</select>
                                     </div>
-                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="false" data-show-toggle="true" data-resizable="true" data-cookie="true"
                                         data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                         <thead>
                                             <tr>
-                                                <th data-field="state" data-checkbox="true"></th>
                                                 <th data-field="id">No</th>
                                                 <th data-field="name" data-editable="true">NISN</th>
                                                 <th data-field="email" data-editable="true">Nama Lengkap</th>
@@ -62,7 +61,6 @@
                                         <?php $i=1; foreach($data_student as $row) { ?>
                                         <tbody>
                                             <tr>
-                                                <td></td>
                                                 <td><?= $i++; ?></td>
                                                 <td><?= $row['nis']?></td>
                                                 <td><?= $row['full_name']?></td>
