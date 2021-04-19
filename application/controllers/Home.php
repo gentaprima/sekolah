@@ -4,6 +4,7 @@ Class Home extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('ModelKuota');
 
     }
     public function index(){
@@ -21,7 +22,8 @@ Class Home extends CI_Controller{
         $data = array(
 
             "active_pendaftaran" => "active",
-            "title" => "Pendaftaran"
+            "title" => "Pendaftaran",
+            "data_kelas" => $this->ModelKuota->getDataKelas(),
         );
         $this->load->view('home/layout/header',$data);
         $this->load->view('home/layout/navbar');

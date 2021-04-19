@@ -51,21 +51,30 @@
                                         data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                         <thead>
                                             <tr>
-                                                <th data-field="id">No</th>
-                                                <th data-field="name" data-editable="true">NISN</th>
-                                                <th data-field="email" data-editable="true">Nama Lengkap</th>
-                                                <th data-field="phone" data-editable="true">Kota</th>
-                                                <th data-field="action">Action</th>
+                                                <th data-field="id"><center>No</center></th>
+                                                <th data-field="name" data-editable="true"><center>NISN</center></th>
+                                                <th data-field="email" data-editable="true"><center>Nama Lengkap</center></th>
+                                                <th data-field="action"><center>Action</center></th>
                                             </tr>
                                         </thead>
                                         <?php $i=1; foreach($data_student as $row) { ?>
                                         <tbody>
                                             <tr>
-                                                <td><?= $i++; ?></td>
+                                                <td><center> <?= $i++; ?> </center></td>
                                                 <td><?= $row['nis']?></td>
                                                 <td><?= $row['full_name']?></td>
-                                                <td><?= $row['kota']?></td>
-                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                <td>
+                                                <center>
+                                                    <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Edit Data">
+                                                        <button onClick="" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-primary btn-circle btn-icon">
+                                                            <i class="fa fa-info"></i></button>
+                                                    </span>
+                                                    <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
+
+                                                        <button onClick="" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-danger btn-circle btn-icon">
+                                                            <i class="fa fa-trash"></i></button>
+                                                    </span>
+                                                </center>
                                                 </td>
                                             </tr>
                                         </tbody>

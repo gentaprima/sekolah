@@ -1,4 +1,9 @@
  <!-- Start Welcome area -->
+ <?php if ($this->session->flashdata('pesan')) { ?>
+    <p style="display: none;" id="pesan"><?= $this->session->flashdata('pesan') ?></p>
+    <p style="display: none;" id="type"><?= $this->session->flashdata('type') ?></p>
+    <p style="display: none;" id="title"><?= $this->session->flashdata('title') ?></p>
+<?php } ?>
  <div class="all-content-wrapper">
         <div class="container-fluid">
             <div class="row">
