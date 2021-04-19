@@ -19,11 +19,13 @@ class Pendaftaran extends CI_Controller
         $jenis_kelamin = $this->input->post('jenis_kelamin');
         $kota = $this->input->post('kota');
         $alamat = $this->input->post('alamat');
+        $nama_kelas = $this->input->post('nama_kelas');
 
 
         $nilai_mtk = $this->input->post('nilai_mtk');
         $nilai_bindo = $this->input->post('nilai_bindo');
         $nilai_bingg = $this->input->post('nilai_bingg');
+        
 
 
         $ijazah = $this->_updatePhoto('ijazah');
@@ -39,11 +41,12 @@ class Pendaftaran extends CI_Controller
             'alamat'    => $alamat,
             'nama_orangtua' => $nama_orangtua,
             'jenis_kelamin' => $jenis_kelamin,
-            'kota'      => $kota
+            'kota'      => $kota,
+            
         );
         $this->ModelPendaftaran->inputDataSiswa($data_siswa);
         $data_pendaftaran = array(
-            'nis' => $nis,
+            'nis'   => $nis,
             'ijazah' => $ijazah,
             'akte'  => $akte,
             'kartu_keluarga' => $kartu_keluarga,
@@ -51,6 +54,7 @@ class Pendaftaran extends CI_Controller
             'nilai_mtk' => $nilai_mtk,
             'nilai_bindo'   => $nilai_bindo,
             'nilai_bingg'   => $nilai_bingg,
+            'id_kelas' => $nama_kelas
         );
         $this->ModelPendaftaran->insertDataPendaftaran($data_pendaftaran);
         $this->session->set_flashdata('type', 'success');

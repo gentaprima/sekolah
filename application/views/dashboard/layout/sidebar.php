@@ -32,7 +32,7 @@
                                 <span class="mini-click-non">Data Kelas</span></a>
                             </li>
                             <li>
-                                <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Kuota Mutasi</span></a>
+                                <a title="Landing Page" href="<?= base_url()?>dashboard/kuota_mutasi" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Kuota Mutasi</span></a>
                             </li>
                             <li>
                                 <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Logout</span></a>
