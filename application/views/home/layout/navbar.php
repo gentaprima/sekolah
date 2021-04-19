@@ -1,3 +1,8 @@
+<?php if($this->session->flashdata('pesan')) { ?>
+<p style="display: none;" id="pesan"><?= $this->session->flashdata('pesan')?></p>
+<p style="display: none;" id="type"><?= $this->session->flashdata('type')?></p>
+<p  style="display: none;" id="title"><?= $this->session->flashdata('title')?></p>
+<?php }?>
 <body data-spy="scroll" data-target=".mainmenu-area">
 
     <div class="preloader">
@@ -26,7 +31,11 @@
                     <?php }else{ ?>
                     <li class=""><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
                     <?php } ?>
-                    <li class=""><a href="">Tentang Sekolah</a></li>
+                    <?php if(isset($active_about)){?>
+                    <li class="active"><a href="<?= base_url()?>home/about_school">Tentang Sekolah</a></li>
+                    <?php }else{?>
+                    <li class=""><a href="<?= base_url()?>home/about_school">Tentang Sekolah</a></li>
+                    <?php }?>
                     <?php if(isset($active_visi)) { ?>
                     <li class="active"><a href="<?= base_url() ?>home/visi">Visi / Misi</a></li>
                     <?php }else{ ?>
@@ -85,11 +94,12 @@
                         <div class="content registerBox" style="display:none;">
                             <div class="form">
                             <!-- REGISTER -->
-                                <form method="" action="" accept-charset="UTF-8">
+                                <form method="post" action="<?= base_url()?>login/procces_register" accept-charset="UTF-8">
                                     <input id="username" class="form-control" type="text" placeholder="Username" name="username">
+                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
                                     <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                     <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
-                                    <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
+                                    <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
                                 </form>
                             </div>
                         </div>
