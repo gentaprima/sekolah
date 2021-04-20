@@ -82,7 +82,8 @@ Class Home extends CI_Controller{
         $data = array(
 
             "active_kuota" => "active",
-            "title" => "Tentang Sekolah"
+            "title" => "Tentang Sekolah",
+            "data_kuota"    => $this->ModelKuota->getDataKuota()
         );
         $this->load->view('home/layout/header',$data);
         $this->load->view('home/layout/navbar');

@@ -24,19 +24,20 @@
           </div>
         </div>
         <div class="row">
+          <?php foreach($data_kuota as $row){ ?>
           <div class="col-xs-12 col-sm-4">
             <div class="price-box">
               <div class="price-header">
                 <div class="price-icon">
                   <span class="lnr lnr-rocket"></span>
                 </div>
-                <h4 class="upper">Kelas 1</h4>
+                <h4 class="upper"><?= $row['nama_kelas'] ?></h4>
               </div>
               <div class="price-body">
                 <ul>
                 <li>Kuota yang dibutuhkan</li>
                   <li>untuk kelas 1</li>
-                  <li>yaitu <b>100 Siswa</b></li>
+                  <li>yaitu <b><?= $row['jumlah_kuota'] ?> Siswa</b></li>
                 </ul>
               </div>
               <!-- <div class="price-rate">
@@ -49,7 +50,8 @@
             </div>
             <div class="space-30 hidden visible-xs"></div>
           </div>
-          <div class="col-xs-12 col-sm-4">
+          <?php } ?>
+          <!-- <div class="col-xs-12 col-sm-4">
             <div class="price-box">
               <div class="price-header">
                 <div class="price-icon">
@@ -64,10 +66,10 @@
                   <li>yaitu <b>100 Siswa</b></li>
                 </ul>
               </div>
-              <!-- <div class="price-rate">
+              <div class="price-rate">
                 <sup>&#36;</sup> <span class="rate">49</span>
                 <small>/Month</small>
-              </div> -->
+              </div>
               <div class="price-footer">
                 <a href="<?= base_url() ?>home/pendaftaran" class="bttn-white">Daftar Sekarang</a>
               </div>
@@ -89,15 +91,15 @@
                   <li>yaitu <b>100 Siswa</b></li>
                 </ul>
               </div>
-              <!-- <div class="price-rate">
+              <div class="price-rate">
                 <sup>&#36;</sup> <span class="rate">99</span>
                 <small>/Month</small>
-              </div> -->
+              </div>
               <div class="price-footer">
                 <a href="<?= base_url() ?>home/pendaftaran" class="bttn-white">Daftar Sekarang</a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>

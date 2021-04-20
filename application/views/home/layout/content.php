@@ -7,7 +7,7 @@
                 </figure>
             </div>
             <div class="col-xs-12 col-md-7">
-            
+
                 <div class="space-80 hidden-xs"></div>
                 <h1 class="wow fadeInUp" data-wow-delay="0.4s">SMPN 148 JAKARTA</h1>
                 <div class="space-20"></div>
@@ -15,7 +15,7 @@
                 </div>
                 <h4 style="padding-bottom: 150px;">Cerdas dan beriman adalah simbol generasi muda bangsa Indonesia..</h4>
                 <div class="space-20"></div>
-              
+
             </div>
         </div>
     </div>
@@ -26,16 +26,16 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-10 col-md-offset-1">
-            
+
                 <div class="page-title text-center">
-                <img src="<?= base_url() ?>assets/home/images/about-logo.png" alt="About Logo">
+                    <img src="<?= base_url() ?>assets/home/images/about-logo.png" alt="About Logo">
                     <div class="space-20"></div>
-                    <h5 style="font-size: 36px;"" class="title">Selamat Datang Di SMPN 148 JAKARTA</h5>
+                    <h5 style="font-size: 36px;"" class=" title">Selamat Datang Di SMPN 148 JAKARTA</h5>
                     <div class="space-30"></div>
                     <h3 class="black-color" style="font-size: 20px;">SMPN 148 Jakarta atau nama sempurnanya Sekolah Menengah Pertama Negeri 148 Jakarta merupakan sebuah Sekolah Menengah Pertama Negeri yang terletak di Jl. Bb I, Cipinang Muara Jakarta Timur, Indonesia. Sekolah Menengah Pertama Negeri 148 Jakarta memiliki kod NPSN 20103512. </h3>
                     <hr>
                     <div class="space-20"></div>
-                    
+
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
                     <div class="box-icon">
-                    <i class="lnr lnr-user"></i>
+                        <i class="lnr lnr-user"></i>
                     </div>
                     <h4>Daftar Akun</h4>
                     <p>Calon siswa terlebih dahulu mendaftarkan akun.</p>
@@ -66,7 +66,7 @@
                 <div class="space-60"></div>
                 <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
                     <div class="box-icon">
-                    <i class="lnr lnr-pencil"></i>
+                        <i class="lnr lnr-pencil"></i>
                     </div>
                     <h4>Mengisi Formulir Pendaftaran</h4>
                     <p>Calon siswa mengisi formulir pendaftaran.</p>
@@ -82,14 +82,15 @@
                 <div class="space-60"></div>
             </div>
             <div class="hidden-xs hidden-sm col-md-4">
-              
-            <img src="<?= base_url() ?>assets/home/images/148-removebg-preview.png" alt="">
-                
+
+                <center>
+                    <img style="width: 300px;" src="<?= base_url() ?>assets/home/images/148-removebg-preview.png" alt="">
+                </center>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="service-box wow fadeInUp" data-wow-delay="0.2s">
                     <div class="box-icon">
-                    <i class="lnr lnr-highlight"></i>
+                        <i class="lnr lnr-highlight"></i>
                     </div>
                     <h4>Melakukan Tes Tertulis Potensi Akademik</h4>
                     <p>Calon siswa melakukan tes tertulis potensi akademik.</p>
@@ -159,14 +160,14 @@
                     <div>
                         <p style="font-weight: bold;">Apa saja ekskul yang terdapat pada SMP Negeri 148 Jakarta ?</p>
                         <ul>
-                        
-                        <li>Futsal</li>
-                        <li>Bola Basket</li>
-                        <li>Voli</li>
-                        <li>Pramuka</li>
-                        <li>Badminton</li>
+
+                            <li>Futsal</li>
+                            <li>Bola Basket</li>
+                            <li>Voli</li>
+                            <li>Pramuka</li>
+                            <li>Badminton</li>
                         </ul>
-                       
+
                     </div>
                     <h3 style="font-weight: bold;">Beasiswa </h3>
                     <div>
