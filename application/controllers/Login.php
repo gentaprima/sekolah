@@ -23,7 +23,6 @@
             
         }
         public function login_process(){
-            
             $username = $this->input->post('username');
             $password = $this->input->post('password');
 
