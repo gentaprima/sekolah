@@ -27,7 +27,12 @@
             $this->load->view('dashboard/layout/footer');
         }
         public function verifikasi_student(){
-            $this->load->view('dashboard/layout/header');
+
+            $data = array(
+                'data_verifikasistudent' => $this->ModelSiswa->getDataVerifikasiSiswa()
+            );
+            
+            $this->load->view('dashboard/layout/header',$data);
             $this->load->view('dashboard/layout/sidebar');
             $this->load->view('dashboard/layout/navbar');
             $this->load->view('dashboard/data/verifikasi_student');
