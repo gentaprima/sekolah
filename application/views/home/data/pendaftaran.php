@@ -88,10 +88,11 @@
                     <div class="form-group row">
                         <label for="" class="col-sm-3 col-form-label">Kelas Tujuan</label>
                         <div class="col-sm-9">
-                            <select type="text"  required name="kelas_tujuan" class="form-control">
-                                <option value="1">Kelas 1</option>
-                                <option value="2">Kelas 2</option>
-                                <option value="3">Kelas 3</option>
+                            <select type="text"  required name="nama_kelas" class="form-control">
+                                <option value="1">--Pilih Kelas--</option>
+                                <?php foreach ($data_kelas as $kelas) { ?>
+                                <option value="<?= $kelas['id_kelas']?>"><?= $kelas['nama_kelas']?></option>
+                              <?php } ?>
                             </select>
                         </div>
                     </div>
