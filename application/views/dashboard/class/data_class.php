@@ -16,7 +16,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Data Siswa</span>
+                                            <li><span class="bread-blod">Data Kelas</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -35,7 +35,7 @@
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
                                 <div class="main-sparkline13-hd">
-                                    <h1><span class="table-project-n">Data</span> Siswa</h1>
+                                    <h1><span class="table-project-n">Data</span>Kelas</h1>
                                 </div>
                             </div>
                             <div class="sparkline13-graph">
@@ -52,17 +52,15 @@
                                         <thead>
                                             <tr>
                                                 <th data-field="id"><center>No</center></th>
-                                                <th data-field="name"><center>NISN</center></th>
-                                                <th data-field="email"><center>Nama Lengkap</center></th>
+                                                <th data-field="email"><center>Nama Kelas</center></th>
                                                 <th data-field="action"><center>Action</center></th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php $i=1; foreach($data_student as $row) { ?>
+                                        <?php $i=1; foreach($data_class as $row) { ?>
                                             <tr>
                                                 <td><center> <?= $i++; ?> </center></td>
-                                                <td><?= $row['nis']?></td>
-                                                <td><?= $row['full_name']?></td>
+                                                <td><?= $row['nama_kelas']?></td>
                                                 <td>
                                                 <center>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Edit Data">
