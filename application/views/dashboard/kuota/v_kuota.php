@@ -66,9 +66,9 @@
                                         </th>
                                     </tr>
                                 </thead>
+                                    <tbody>
                                 <?php $i = 1;
                                 foreach ($data_kuota as $row) { ?>
-                                    <tbody>
                                         <tr>
                                             <td>
                                                 <center><?= $i++; ?></center>
@@ -88,8 +88,8 @@
                                                 </center>
                                             </td>
                                         </tr>
-                                    </tbody>
                                 <?php } ?>
+                                    </tbody>
                             </table>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
         </button>
       </div>
       <div class="modal-body">
-      
+
       Anda yakin ingin menghapus data?
       </div>
       <div class="modal-footer">
@@ -158,4 +158,4 @@
     </div>
   </div>
 </div>
-</div>
+</div> 
