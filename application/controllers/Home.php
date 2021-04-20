@@ -75,4 +75,16 @@ Class Home extends CI_Controller{
         $this->load->view('home/about_school/aboutSchool');
         $this->load->view('home/layout/footer');
     }
+
+    public function kuota_mutasi(){
+        $data = array(
+
+            "active_kuota" => "active",
+            "title" => "Tentang Sekolah"
+        );
+        $this->load->view('home/layout/header',$data);
+        $this->load->view('home/layout/navbar');
+        $this->load->view('home/kuota/v_kuota');
+        $this->load->view('home/layout/footer');
+    }
 }
