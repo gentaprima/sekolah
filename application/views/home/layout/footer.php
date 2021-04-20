@@ -12,12 +12,11 @@
       <div class="col-xs-12 col-md-7">
         <div class="footer-menu">
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Testimonial</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pendaftaran</a></li>
+            <li><a href="#">Tentang Sekolah </a></li>
+            <li><a href="#">Visi/Misi</a></li>
+            <li><a href="#">Kuota Mutasi</a></li> 
           </ul>
         </div>
       </div>
@@ -50,5 +49,20 @@
  </script>
 
 <script src="<?= base_url() ?>assets/home/js/main.js"></script>
+
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script> -->
+<!-- <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script> -->
 </body>
+
+<!-- Mirrored from preview.colorlib.com/theme/appy/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Mar 2021 13:11:36 GMT -->
+
 </html>

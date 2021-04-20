@@ -71,7 +71,7 @@
     <script src="<?= base_url()?>assets/admin/js/main.js"></script>
     <!-- tawk chat JS
 		============================================ -->
-    <script src="<?= base_url()?>assets/admin/js/tawk-chat.js"></script>
+    <!-- <script src="<?= base_url()?>assets/admin/js/tawk-chat.js"></script> -->
     <script src="<?= base_url()?>assets/admin/js/vendor/modernizr-2.8.3.min.js"></script>
     <!-- data table JS
 		============================================ -->
@@ -107,7 +107,19 @@
     <script src="<?= base_url() ?>assets/admin/js/main.js"></script>
     <!-- tawk chat JS
 		============================================ -->
-    <script src="<?= base_url() ?>assets/admin/js/tawk-chat.js"></script>
+    <script src="<?= base_url()?>assets/admin/kuota.js"></script>
+    <script src="<?= base_url() ?>assets/alert.js"></script>
+<script>
+   pesan = document.getElementById('pesan');
+   if (pesan != null) {
+     swal({
+       title: document.getElementById('title').innerHTML,
+       text: pesan.innerHTML,
+       icon: document.getElementById('type').innerHTML,
+     });
+   }
+ </script>
+    <!-- <script src="<?= base_url() ?>assets/admin/js/tawk-chat.js"></script> -->
 </body>
 
 </html>
