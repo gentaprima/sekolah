@@ -13,6 +13,7 @@
 
     <title>SMP 148 Official</title>
 
+    <script src="<?= base_url() ?>assets/login/js/jquery-1.10.2.js" type="text/javascript"></script>
     <link rel="apple-touch-icon" href="<?= base_url() ?>assets/home/images/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="<?= base_url() ?>assets/home/images/favicon.ico" />
 
@@ -30,13 +31,8 @@
     <link href="<?= base_url() ?>assets/login/css/login-register.css" rel="stylesheet" />
     <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"> -->
 
-    <script src="<?= base_url() ?>assets/login/js/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="<?= base_url() ?>assets/login/js/bootstrap.js" type="text/javascript"></script>
     <script src="<?= base_url() ?>assets/login/js/login-register.js" type="text/javascript"></script>
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <style>
         .bg-white{
             background-color: #FFF;

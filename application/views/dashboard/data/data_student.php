@@ -52,13 +52,13 @@
                                         <thead>
                                             <tr>
                                                 <th data-field="id"><center>No</center></th>
-                                                <th data-field="name" data-editable="true"><center>NISN</center></th>
-                                                <th data-field="email" data-editable="true"><center>Nama Lengkap</center></th>
+                                                <th data-field="name"><center>NISN</center></th>
+                                                <th data-field="email"><center>Nama Lengkap</center></th>
                                                 <th data-field="action"><center>Action</center></th>
                                             </tr>
                                         </thead>
-                                        <?php $i=1; foreach($data_student as $row) { ?>
                                         <tbody>
+                                        <?php $i=1; foreach($data_student as $row) { ?>
                                             <tr>
                                                 <td><center> <?= $i++; ?> </center></td>
                                                 <td><?= $row['nis']?></td>
@@ -70,15 +70,14 @@
                                                             <i class="fa fa-info"></i></button>
                                                     </span>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
-
                                                         <button onClick="" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-danger btn-circle btn-icon">
                                                             <i class="fa fa-trash"></i></button>
                                                     </span>
                                                 </center>
                                                 </td>
                                             </tr>
-                                        </tbody>
                                         <?php } ?>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>

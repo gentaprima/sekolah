@@ -16,7 +16,7 @@
                             <ul class="breadcome-menu">
                                 <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                 </li>
-                                <li><span class="bread-blod">Kuota Mutasi</span>
+                                <li><span class="bread-blod">Data Kelas</span>
                                 </li>
                             </ul>
                         </div>
@@ -35,8 +35,8 @@
                 <div class="sparkline13-list">
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
-                            <button onClick="add_kuota('<?= base_url() ?>kuota/add_kuota')" data-toggle="modal" data-target="#modaltambah" style="float: right;position:relative;bottom:10px;" class="btn btn-primary">Tambah Data</button>
-                            <h1><span class="table-project-n">Kuota</span> Mutasi</h1>
+                            <button onClick="add_class('<?= base_url() ?>kelas/add_class')" data-toggle="modal" data-target="#modaltambah" style="float: right;position:relative;bottom:10px;" class="btn btn-primary">Tambah Data</button>
+                            <h1><span class="table-project-n">Data</span> Kelas</h1>
 
                         </div>
                     </div>
@@ -58,38 +58,34 @@
                                         <th data-field="name" data-editable="true">
                                             <center>Nama Kelas</center>
                                         </th>
-                                        <th data-field="email" data-editable="true">
-                                            <center>Jumlah Kuota</center>
-                                        </th>
                                         <th data-field="action">
                                             <center>Action</center>
                                         </th>
                                     </tr>
                                 </thead>
-                                    <tbody>
-                                <?php $i = 1;
-                                foreach ($data_kuota as $row) { ?>
+                                <tbody>
+                                    <?php $i = 1;
+                                    foreach ($data_class as $row) { ?>
                                         <tr>
                                             <td>
                                                 <center><?= $i++; ?></center>
                                             </td>
                                             <td><?= $row['nama_kelas'] ?></td>
-                                            <td><?= $row['jumlah_kuota'] ?></td>
                                             <td>
                                                 <center>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Edit Data">
-                                                        <button onClick="edit_kuota('<?= base_url() ?>kuota/edit_kuota','<?= $row['id_kelas'] ?>','<?= $row['jumlah_kuota'] ?>','<?= $row['id_kuota']?>')" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-primary btn-circle btn-icon">
+                                                        <button onClick="edit_class('<?= base_url() ?>kelas/edit_class','<?= $row['id_kelas'] ?>','<?= $row['nama_kelas']?>')" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-primary btn-circle btn-icon">
                                                             <i class="fa fa-edit"></i></button>
                                                     </span>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
-                                                        <button onClick="delete_kuota('<?= base_url()?>kuota/delete_kuota/<?= $row['id_kuota']?>')" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-danger btn-circle btn-icon">
+                                                        <button onClick="delete_class('<?= base_url() ?>kelas/delete_class/<?= $row['id_kelas'] ?>')" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-danger btn-circle btn-icon">
                                                             <i class="fa fa-trash"></i></button>
                                                     </span>
                                                 </center>
                                             </td>
                                         </tr>
-                                <?php } ?>
-                                    </tbody>
+                                    <?php } ?>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -113,19 +109,11 @@
             </div>
             <div class="modal-body">
                 <form action="" id="form" method="post">
-                <input type="hidden"  id="id_kuota" name="id_kuota" class="form-control">
+                    
                     <div class="form-group">
-                        <label for="">Kelas</label>
-                        <select class="form-control" name="nama_kelas" id="nama_kelas">
-                            <option value="">--Pilih Kelas--</option>
-                            <?php foreach ($data_kelas as $kelas) { ?>
-                                <option value="<?= $kelas['id_kelas'] ?>"><?= $kelas['nama_kelas'] ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Jumlah Kuota</label>
-                        <input type="text" placeholder="Masukkan Jumlah Kuota" id="jumlah_kuota" name="jumlah_kuota" class="form-control">
+                        <input type="hidden" name="id_kelas" id="id_kelas" class="form-control">
+                        <label for="">Nama Kelas</label>
+                        <input type="text" placeholder="Masukkan Nama Kelas" id="nama_kelas" name="nama_kelas" class="form-control">
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -139,23 +127,23 @@
 
 
 <div class="modal fade" id="modal_delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal_title">Form Hapus Data</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_title">Form Hapus Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
-      Anda yakin ingin menghapus data?
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a  id="buttondelete" class="btn btn-primary">Hapus Data</a>
-      </div>
+                Anda yakin ingin menghapus data?
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a id="buttondelete" class="btn btn-primary">Hapus Data</a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-</div> 
+</div>
