@@ -6,6 +6,7 @@
         {
             parent::__construct();
             $this->load->model('ModelSiswa');
+            $this->load->model('ModelKelas');
         }
         public function index(){
             $this->load->view('dashboard/layout/header');
@@ -29,6 +30,18 @@
             $this->load->view('dashboard/layout/sidebar');
             $this->load->view('dashboard/layout/navbar');
             $this->load->view('dashboard/data/verifikasi_student');
+            $this->load->view('dashboard/layout/footer');
+        }
+
+        public function data_class(){
+            $data = array(
+                'data_class' => $this->ModelKelas->getData(),
+            );
+
+            $this->load->view('dashboard/layout/header',$data);
+            $this->load->view('dashboard/layout/sidebar');
+            $this->load->view('dashboard/layout/navbar');
+            $this->load->view('dashboard/class/data_class');
             $this->load->view('dashboard/layout/footer');
         }
     }
