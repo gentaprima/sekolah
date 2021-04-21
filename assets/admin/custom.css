@@ -1,0 +1,85 @@
+.sidebar-nav .metismenu a.active{
+    color: #FFF  !important;
+    background-color:#006DF0 !important;
+}
+
+.sidebar-nav .metismenu li .icon-wrap.active{
+    color: #FFF  !important;
+}
+
+.submenu-angle.collapse.show li.active{
+    border-left: 4px solid #006DF0;
+    background: #eee
+}
+
+.badge-warning{
+    background: #f9a825;
+    color: #FFF;
+}
+
+.badge-danger{
+    background: #dd2c00;
+    color: #FFF;
+}
+
+.btn-outline-success{
+    color: #5cb85c;
+    background-color: transparent;
+    border-color: #4cae4c;
+}
+
+.btn-outline-success:hover{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn-outline-warning{
+    color: #f9a825;
+    background-color: transparent;
+    border-color: #f9a825;
+}
+
+.btn-outline-warning:hover{
+    color: #fff;
+    background-color: #f9a825;
+    border-color: #f9a825;
+}
+
+.btn-outline-info{
+    color: #5bc0de;
+    background-color: transparent;
+    border-color: #46b8da;
+}
+.btn-outline-info:hover{
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.btn-outline-purple{
+    color: #7c4dff;
+    background-color: transparent;
+    border-color: #7c4dff;
+}
+.btn-outline-purple:hover{
+    color: #fff;
+    background-color: #7c4dff;
+    border-color: #7c4dff;
+}
+
+.btn-circle{
+    border-radius: 50%;
+}
+
+.mt-6 {
+    margin-top: 10px;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.fixed-footer{
+    position: fixed;
+    bottom: 0;
+    width: 184vh
+}

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
-                <h1 class="white-color">Welcome To Mobile Legend</h1>
+                <h1 class="white-color">Pendaftaran Siswa</h1>
                 <ul class="breadcrumb">
                     <li><a href="index-2.html">Home</a></li>
                     <li>Pendaftaran</li>
@@ -88,11 +88,11 @@
                     <div class="form-group row">
                         <label for="" class="col-sm-3 col-form-label">Kelas Tujuan</label>
                         <div class="col-sm-9">
-                            <select type="text"  required name="nama_kelas" class="form-control">
+                            <select type="text" required name="nama_kelas" class="form-control">
                                 <option value="1">--Pilih Kelas--</option>
                                 <?php foreach ($data_kelas as $kelas) { ?>
-                                <option value="<?= $kelas['id_kelas']?>"><?= $kelas['nama_kelas']?></option>
-                              <?php } ?>
+                                    <option value="<?= $kelas['id_kelas'] ?>"><?= $kelas['nama_kelas'] ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
@@ -135,20 +135,26 @@
                 <div class="col-md-6 mt-4">
 
                     <div class="form-group row">
+                        <label for="formFile" class="col-sm-3 col-form-label">Foto Siswa</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" required type="file" name="profil" id="formFile">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Akte Kelahiran</label>
                         <div class="col-sm-9">
                             <input class="form-control" required type="file" name="akte" id="formFile">
                         </div>
                     </div>
+
+                </div>
+                <div class="col-md-6">
                     <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Kartu Keluarga</label>
                         <div class="col-sm-9">
                             <input class="form-control" required type="file" name="kartu_keluarga" id="formFile">
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-
                     <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Ijazah</label>
                         <div class="col-sm-9">

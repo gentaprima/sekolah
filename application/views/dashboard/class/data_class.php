@@ -55,7 +55,7 @@
                                         <th data-field="id">
                                             <center>No</center>
                                         </th>
-                                        <th data-field="name" data-editable="true">
+                                        <th data-field="name" >
                                             <center>Nama Kelas</center>
                                         </th>
                                         <th data-field="action">
@@ -104,7 +104,6 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="modal_title"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
@@ -132,7 +131,6 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="modal_title">Form Hapus Data</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
@@ -145,5 +143,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>

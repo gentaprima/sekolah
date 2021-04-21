@@ -55,10 +55,10 @@
                                         <th data-field="id">
                                             <center>No</center>
                                         </th>
-                                        <th data-field="name" data-editable="true">
+                                        <th data-field="name">
                                             <center>Nama Kelas</center>
                                         </th>
-                                        <th data-field="email" data-editable="true">
+                                        <th data-field="email">
                                             <center>Jumlah Kuota</center>
                                         </th>
                                         <th data-field="action">
@@ -66,9 +66,9 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                    <tbody>
-                                <?php $i = 1;
-                                foreach ($data_kuota as $row) { ?>
+                                <tbody>
+                                    <?php $i = 1;
+                                    foreach ($data_kuota as $row) { ?>
                                         <tr>
                                             <td>
                                                 <center><?= $i++; ?></center>
@@ -78,18 +78,18 @@
                                             <td>
                                                 <center>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Edit Data">
-                                                        <button onClick="edit_kuota('<?= base_url() ?>kuota/edit_kuota','<?= $row['id_kelas'] ?>','<?= $row['jumlah_kuota'] ?>','<?= $row['id_kuota']?>')" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-primary btn-circle btn-icon">
+                                                        <button onClick="edit_kuota('<?= base_url() ?>kuota/edit_kuota','<?= $row['id_kelas'] ?>','<?= $row['jumlah_kuota'] ?>','<?= $row['id_kuota'] ?>')" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-primary btn-circle btn-icon">
                                                             <i class="fa fa-edit"></i></button>
                                                     </span>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
-                                                        <button onClick="delete_kuota('<?= base_url()?>kuota/delete_kuota/<?= $row['id_kuota']?>')" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-danger btn-circle btn-icon">
+                                                        <button onClick="delete_kuota('<?= base_url() ?>kuota/delete_kuota/<?= $row['id_kuota'] ?>')" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-danger btn-circle btn-icon">
                                                             <i class="fa fa-trash"></i></button>
                                                     </span>
                                                 </center>
                                             </td>
                                         </tr>
-                                <?php } ?>
-                                    </tbody>
+                                    <?php } ?>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -99,7 +99,25 @@
     </div>
 </div>
 
+<div class="modal fade" id="modal_delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_title">Form Hapus Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
 
+                Anda yakin ingin menghapus data?
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a id="buttondelete" class="btn btn-primary">Hapus Data</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="modaltambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -108,12 +126,11 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="modal_title"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form action="" id="form" method="post">
-                <input type="hidden"  id="id_kuota" name="id_kuota" class="form-control">
+                    <input type="hidden" id="id_kuota" name="id_kuota" class="form-control">
                     <div class="form-group">
                         <label for="">Kelas</label>
                         <select class="form-control" name="nama_kelas" id="nama_kelas">
@@ -136,26 +153,3 @@
     </div>
 </div>
 </div>
-
-
-<div class="modal fade" id="modal_delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal_title">Form Hapus Data</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-      Anda yakin ingin menghapus data?
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a  id="buttondelete" class="btn btn-primary">Hapus Data</a>
-      </div>
-    </div>
-  </div>
-</div>
-</div> 
