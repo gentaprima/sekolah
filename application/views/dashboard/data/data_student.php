@@ -57,8 +57,8 @@
                                                 <th data-field="action"><center>Action</center></th>
                                             </tr>
                                         </thead>
-                                        <?php $i=1; foreach($data_student as $row) { ?>
                                         <tbody>
+                                        <?php $i=1; foreach($data_student as $row) { ?>
                                             <tr>
                                                 <td><center> <?= $i++; ?> </center></td>
                                                 <td><?= $row['nis']?></td>
@@ -76,8 +76,8 @@
                                                 </center>
                                                 </td>
                                             </tr>
-                                        </tbody>
                                         <?php } ?>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
