@@ -32,6 +32,7 @@ class Pendaftaran extends CI_Controller
         $akte = $this->_updatePhoto('akte');
         $kartu_keluarga = $this->_updatePhoto('kartu_keluarga');
         $bukti_nis = $this->_updatePhoto('bukti_nis');
+        $fotoSiswa = $this->_updatePhoto('profil');
 
         $data_siswa = array(
             'id_user'   => $id_user,
@@ -42,7 +43,7 @@ class Pendaftaran extends CI_Controller
             'nama_orangtua' => $nama_orangtua,
             'jenis_kelamin' => $jenis_kelamin,
             'kota'      => $kota,
-            
+            'foto_siswa'    => $fotoSiswa
         );
         $this->ModelPendaftaran->inputDataSiswa($data_siswa);
         $data_pendaftaran = array(

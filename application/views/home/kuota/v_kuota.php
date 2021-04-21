@@ -36,7 +36,7 @@
               <div class="price-body">
                 <ul>
                 <li>Kuota yang dibutuhkan</li>
-                  <li>untuk kelas 1</li>
+                  <li>untuk <?= $row['nama_kelas'] ?></li>
                   <li>yaitu <b><?= $row['jumlah_kuota'] ?> Siswa</b></li>
                 </ul>
               </div>

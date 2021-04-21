@@ -10,7 +10,11 @@
             $this->load->model('ModelKuota');
         }
         public function index(){
-            $this->load->view('dashboard/layout/header');
+            $data = [
+                'title' => 'Dashboard',
+                'active_home'   => 'active'
+            ];
+            $this->load->view('dashboard/layout/header',$data);
             $this->load->view('dashboard/layout/sidebar');
             $this->load->view('dashboard/layout/navbar');
             $this->load->view('dashboard/layout/content');
@@ -18,7 +22,9 @@
         }
         public function data_student(){
             $data = array(
+                'title' => 'Data Siswa Mutasi',
                 'data_student' => $this->ModelSiswa->getData(),
+                'active_student'    => "active"
             );
             $this->load->view('dashboard/layout/header',$data);
             $this->load->view('dashboard/layout/sidebar');
@@ -29,7 +35,9 @@
         public function verifikasi_student(){
 
             $data = array(
-                'data_verifikasistudent' => $this->ModelSiswa->getDataVerifikasiSiswa()
+                'title' => 'Verifikasi Dokumen',
+                'data_verifikasistudent' => $this->ModelSiswa->getDataVerifikasiSiswa(),
+                'active_verifikasi'    => "active"
             );
             
             $this->load->view('dashboard/layout/header',$data);
@@ -41,7 +49,9 @@
 
         public function data_class(){
             $data = array(
+                'title' => 'Data Kelas',
                 'data_class' => $this->ModelKelas->getData(),
+                'active_class' => 'active' 
             );
 
             $this->load->view('dashboard/layout/header',$data);
@@ -53,8 +63,10 @@
 
         public function kuota_mutasi(){
             $data = array(
+                'title' => 'Data Kuota Mutasi',
                 'data_kelas' => $this->ModelKuota->getDataKelas(),
                 'data_kuota' => $this->ModelKuota->getDataKuota(),
+                'active_kuota' => 'active'
             );
 
             $this->load->view('dashboard/layout/header',$data);
