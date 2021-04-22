@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard V.1 | Kiaalap - Kiaalap Admin Template</title>
+    <title><?= $title ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -56,6 +56,7 @@
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="<?= base_url()?>assets/admin/style.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/admin/custom.css">
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/responsive.css">

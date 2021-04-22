@@ -16,6 +16,7 @@ class Pendaftaran extends CI_Controller
         $full_name = $this->input->post('full_name');
         $tgl_lahir = $this->input->post('tgl_lahir');
         $nama_orangtua = $this->input->post('nama_orangtua');
+        $no_telp = $this->input->post('no_telp');
         $jenis_kelamin = $this->input->post('jenis_kelamin');
         $kota = $this->input->post('kota');
         $alamat = $this->input->post('alamat');
@@ -32,6 +33,7 @@ class Pendaftaran extends CI_Controller
         $akte = $this->_updatePhoto('akte');
         $kartu_keluarga = $this->_updatePhoto('kartu_keluarga');
         $bukti_nis = $this->_updatePhoto('bukti_nis');
+        $fotoSiswa = $this->_updatePhoto('profil');
 
         $data_siswa = array(
             'id_user'   => $id_user,
@@ -40,9 +42,10 @@ class Pendaftaran extends CI_Controller
             'tgl_lahir' => $tgl_lahir,
             'alamat'    => $alamat,
             'nama_orangtua' => $nama_orangtua,
+            'no_telp' => $no_telp,
             'jenis_kelamin' => $jenis_kelamin,
             'kota'      => $kota,
-            
+            'foto_siswa'    => $fotoSiswa
         );
         $this->ModelPendaftaran->inputDataSiswa($data_siswa);
         $data_pendaftaran = array(

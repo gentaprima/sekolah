@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
-                <h1 class="white-color">Welcome To Mobile Legend</h1>
+                <h1 class="white-color">Pendaftaran Siswa</h1>
                 <ul class="breadcrumb">
                     <li><a href="index-2.html">Home</a></li>
                     <li>Pendaftaran</li>
@@ -27,12 +27,6 @@
                             </div>
                     </div>
                     <div class="form-group row">
-                        <label for="formFile" class="col-sm-3 col-form-label">Foto NISN</label>
-                        <div class="col-sm-9">
-                            <input class="form-control" type="file" required name="bukti_nis" id="formFile">
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label for="" class="col-sm-3 col-form-label">Nama Lengkap</label>
                         <div class="col-sm-9">
                             <input type="text" value="" id="" required name="full_name" class="form-control">
@@ -41,15 +35,21 @@
                     <div class="form-group row">
                         <label for="" class="col-sm-3 col-form-label">Tanggal Lahir</label>
                         <div class="col-sm-9">
-                            <input type="text" value="" id="" required name="tgl_lahir" class="form-control">
+                            <input type="date" value="" id="tgl_lahir" required name="tgl_lahir" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-3 col-form-label">Nama Orang Tua</label>
+                        <div class="col-sm-9">
+                            <input type="text" value="" id="" required name="nama_orangtua" class="form-control">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Nama Orang Tua</label>
+                        <label for="" class="col-sm-3 col-form-label">Nomor Telepon</label>
                         <div class="col-sm-9">
-                            <input type="text" value="" id="" required name="nama_orangtua" class="form-control">
+                            <input type="text" value="" id="" required name="no_telp" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -88,11 +88,11 @@
                     <div class="form-group row">
                         <label for="" class="col-sm-3 col-form-label">Kelas Tujuan</label>
                         <div class="col-sm-9">
-                            <select type="text"  required name="nama_kelas" class="form-control">
+                            <select type="text" required name="nama_kelas" class="form-control">
                                 <option value="1">--Pilih Kelas--</option>
                                 <?php foreach ($data_kelas as $kelas) { ?>
-                                <option value="<?= $kelas['id_kelas']?>"><?= $kelas['nama_kelas']?></option>
-                              <?php } ?>
+                                    <option value="<?= $kelas['id_kelas'] ?>"><?= $kelas['nama_kelas'] ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>
@@ -133,22 +133,34 @@
                     <h4>Silahkan isi halaman form pendaftaran sesuai ketentuan yang ada.</h4>
                 </center>
                 <div class="col-md-6 mt-4">
+                <div class="form-group row">
+                        <label for="formFile" class="col-sm-3 col-form-label">Foto NISN</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" type="file" required name="bukti_nis" id="formFile">
+                        </div>
+                    </div>
 
+                    <div class="form-group row">
+                        <label for="formFile" class="col-sm-3 col-form-label">Foto Siswa</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" required type="file" name="profil" id="formFile">
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Akte Kelahiran</label>
                         <div class="col-sm-9">
                             <input class="form-control" required type="file" name="akte" id="formFile">
                         </div>
                     </div>
+
+                </div>
+                <div class="col-md-6">
                     <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Kartu Keluarga</label>
                         <div class="col-sm-9">
                             <input class="form-control" required type="file" name="kartu_keluarga" id="formFile">
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-
                     <div class="form-group row">
                         <label for="formFile" class="col-sm-3 col-form-label">Ijazah</label>
                         <div class="col-sm-9">
