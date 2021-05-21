@@ -33,6 +33,7 @@
 
     <script src="<?= base_url() ?>assets/login/js/bootstrap.js" type="text/javascript"></script>
     <script src="<?= base_url() ?>assets/login/js/login-register.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
     <style>
         .bg-white{
             background-color: #FFF;
