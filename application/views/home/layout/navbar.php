@@ -44,7 +44,8 @@
                     <?php } else { ?>
                         <li class=""><a href="<?= base_url() ?>home/visi">Visi / Misi</a></li>
                     <?php } ?>
-                    <?php if (isset($active_kuota)) { ?>
+                    <?php if (isset($active_kuota)) { ?> 
+                    
                         <li class="active"><a href="<?= base_url() ?>home/kuota_mutasi">Kuota Mutasi</a></li>
                     <?php } else { ?>
                         <li class=""><a href="<?= base_url() ?>home/kuota_mutasi">Kuota Mutasi</a></li>
