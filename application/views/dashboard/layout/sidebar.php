@@ -108,7 +108,7 @@
                                 </li>
                                 <li>
 
-                                    <a title="Landing Page" href="events.html" aria-expanded="false">
+                                    <a title="Landing Page" href="<?= base_url()?>login/logout" aria-expanded="false">
                                         <span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span>
                                         <span class="mini-click-non">Logout</span>
                                     </a>
