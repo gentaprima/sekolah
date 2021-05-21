@@ -62,7 +62,8 @@
                         <?php } else { ?>
                             <li class=""><a href="">Hasil</a></li>
                         <?php } ?>
-                    <?php } else { ?>
+                    <?php } ?>
+                    <?php if($this->session->userdata('admin') == true){ ?>
                         <li><a href="<?= base_url() ?>dashboard/">Dashboard</a></li>
                     <?php } ?>
                     <?php if ($this->session->userdata('username') != null && $this->session->userdata('admin') == false) { ?>
