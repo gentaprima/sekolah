@@ -350,7 +350,7 @@
                                                 </div>
                                                 <div class="col-sm-1">
                                                     <div style="color: grey;padding:10px;" class="checkbox-group">
-                                                        <input name="check_indo" type="checkbox" aria-label="Checkbox for following text input">
+                                                        <input name="check_bindo" type="checkbox" aria-label="Checkbox for following text input">
                                                     </div>
                                                 </div>
                                             </div>
@@ -365,7 +365,7 @@
                                                 </div>
                                                 <div class="col-sm-1">
                                                     <div style="color: grey;padding:10px;" class="checkbox-group">
-                                                        <input name="check_alamat" type="checkbox" aria-label="Checkbox for following text input">
+                                                        <input name="check_bingg" type="checkbox" aria-label="Checkbox for following text input">
                                                     </div>
                                                 </div>
                                             </div>

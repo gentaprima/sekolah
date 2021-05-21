@@ -16,13 +16,12 @@ class Konfirmasi extends CI_Controller
         $check_kota = $this->input->post('check_kota');
         $check_phone = $this->input->post('check_phone');
         $check_mtk = $this->input->post('check_mtk');
-        $check_bindo = $this->input->post('check_indo');
+        $check_bindo = $this->input->post('check_bindo');
         $check_bingg = $this->input->post('check_bingg');
         $check_kk = $this->input->post('check_kk');
         $check_akte = $this->input->post('check_akte');
         $id_pendaftaran = $this->input->post('id_user');
-
-        if ($check_nisn != null && $check_nama != null && $check_tgl != null && $check_jk != null && $check_kota != null && $check_phone != null && $check_mtk != null && $check_bindo != null && $check_bingg != null && $check_kk != null && $check_akte != null) {
+        if ($check_nisn == 'on' && $check_nama == 'on' && $check_tgl == 'on' && $check_jk == 'on' && $check_kota == 'on' && $check_phone == 'on' && $check_mtk == 'on' && $check_bindo == 'on' && $check_bingg != 'on' && $check_kk != 'on' && $check_akte != 'on') {
             $data_sukses = array(
                 'is_verify' => 1,
             );
