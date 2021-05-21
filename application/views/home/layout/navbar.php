@@ -59,9 +59,9 @@
                     <?php } ?>
                     <?php if ($this->session->userdata('username') != null && $this->session->userdata('admin') == false) { ?>
                         <?php if (isset($active_hasil)) { ?>
-                            <li class="active"><a href="">Hasil</a></li>
+                            <li class="active"><a href="<?= base_url() ?>home/hasil">Hasil</a></li>
                         <?php } else { ?>
-                            <li class=""><a href="">Hasil</a></li>
+                            <li class=""><a href="<?= base_url() ?>home/hasil">Hasil</a></li>
                         <?php } ?>
                     <?php } ?>
                     <?php if($this->session->userdata('admin') == true){ ?>
