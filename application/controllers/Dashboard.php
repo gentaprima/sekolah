@@ -8,7 +8,11 @@
             $this->load->model('ModelSiswa');
             $this->load->model('ModelKelas');
             $this->load->model('ModelKuota');
+
+            if($this->session->userdata('username') == null || $this->session->userdata('admin') != true){
+                redirect(base_url());
         }
+    }
         public function index(){
             $data = [
                 'title' => 'Dashboard',

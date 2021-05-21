@@ -27,10 +27,12 @@
                     <?php } else { ?>
                         <li class=""><a href="<?= base_url() ?>home/index">Home</a></li>
                     <?php } ?>
-                    <?php if (isset($active_pendaftaran)) { ?>
-                        <li class="active"><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
-                    <?php } else { ?>
-                        <li class=""><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
+                    <?php if ($this->session->userdata('username') != null && $this->session->userdata('admin') == false) { ?>
+                        <?php if (isset($active_pendaftaran)) { ?>
+                            <li class="active"><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
+                        <?php } else { ?>
+                            <li class=""><a href="<?= base_url() ?>home/pendaftaran">Pendaftaran</a></li>
+                        <?php } ?>
                     <?php } ?>
                     <?php if (isset($active_about)) { ?>
                         <li class="active"><a href="<?= base_url() ?>home/about_school">Tentang Sekolah</a></li>
@@ -42,7 +44,8 @@
                     <?php } else { ?>
                         <li class=""><a href="<?= base_url() ?>home/visi">Visi / Misi</a></li>
                     <?php } ?>
-                    <?php if (isset($active_kuota)) { ?>
+                    <?php if (isset($active_kuota)) { ?> 
+                    
                         <li class="active"><a href="<?= base_url() ?>home/kuota_mutasi">Kuota Mutasi</a></li>
                     <?php } else { ?>
                         <li class=""><a href="<?= base_url() ?>home/kuota_mutasi">Kuota Mutasi</a></li>
@@ -60,20 +63,26 @@
                         <?php } else { ?>
                             <li class=""><a href="<?= base_url() ?>home/hasil">Hasil</a></li>
                         <?php } ?>
-                    <?php } else { ?>
-                        <li ><a href="<?= base_url() ?>dashboard/">Dashboard</a></li>
                     <?php } ?>
-
+                    <?php if($this->session->userdata('admin') == true){ ?>
+                        <li><a href="<?= base_url() ?>dashboard/">Dashboard</a></li>
+                    <?php } ?>
+                    <?php if ($this->session->userdata('username') != null && $this->session->userdata('admin') == false) { ?>
+                        <li class=""><a href="<?= base_url() ?>login/logout">Logout</a></li>
+                    <?php } ?>
                 </ul>
+
                 <?php if ($this->session->userdata('username') == null) { ?>
                     <div class="right-button hidden-xs">
                         <a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Login/Daftar</a>
                     </div>
                 <?php } else { ?>
                     <div class="right-button hidden-xs">
-                        <a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Halo, <?= $this->session->userdata('username'); ?></a>
+                        <a data-toggle="modal" href="javascript:void(0)">Halo, <?= $this->session->userdata('username'); ?></a>
                     </div>
                 <?php } ?>
+
+                
             </div>
         </div>
     </nav>
