@@ -52,8 +52,16 @@
                                         <thead>
                                             <tr>
                                                 <th data-field="id"><center>No</center></th>
+<<<<<<< HEAD
+                                                <th data-field="nis"><center>NIS</center></th>
+                                                <th data-field="full_name"><center>Nama Siswa</center></th>
+                                                <th data-field="tgl_lahir"><center>Tanggal Lahir</center></th>
+                                                <th data-field="alamat"><center>Alamat</center></th>
+                                                <th data-field="jenis_kelamin"><center>Jenis Kelamin</center></th>
+=======
                                                 <th data-field="name"><center>NISN</center></th>
                                                 <th data-field="email"><center>Nama Lengkap</center></th>
+>>>>>>> 6cafe6edbdee5b453b4a84f3a1e5b24191f2c09b
                                                 <th data-field="action"><center>Action</center></th>
                                             </tr>
                                         </thead>
@@ -61,6 +69,20 @@
                                         
                                             <tr>
                                                 <td><center>  </center></td>
+<<<<<<< HEAD
+                                                <td><center>  </center></td>
+                                                <td><center>  </center></td>
+                                                <td><center>  </center></td>
+                                                <td><center>  </center></td>
+                                                <td><center>  </center></td>
+                                                <td>
+                                                <center>
+                                                    <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Tambah Jadwal">
+                                                        <button onClick="" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-primary btn-circle btn-icon">
+                                                            <i class="fa fa-calendar"></i></button>
+                                                    </span>
+                                                   
+=======
                                                 <td></td>
                                                 <td></td>
                                                 <td>
@@ -73,6 +95,7 @@
                                                         <button onClick="" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-danger btn-circle btn-icon">
                                                             <i class="fa fa-trash"></i></button>
                                                     </span>
+>>>>>>> 6cafe6edbdee5b453b4a84f3a1e5b24191f2c09b
                                                 </center>
                                                 </td>
                                             </tr>
