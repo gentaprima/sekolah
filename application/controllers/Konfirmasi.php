@@ -24,12 +24,14 @@ class Konfirmasi extends CI_Controller
         if ($check_nisn == 'on' && $check_nama == 'on' && $check_tgl == 'on' && $check_jk == 'on' && $check_kota == 'on' && $check_phone == 'on' && $check_mtk == 'on' && $check_bindo == 'on' && $check_bingg == 'on' && $check_kk == 'on' && $check_akte == 'on') {
             $data_sukses = array(
                 'is_verify' => 1,
+                'pemberitahuan' => 'Selamat Anda Telah Lolos Dari Verfikasi Data, Silahkan Tunggu Jadwal Tes Tertulis.',
             );
             $this->ModelPendaftaran->isVerficationSucces($id_pendaftaran, $data_sukses);
         
         } else {
             $data = array(
                 'is_verify' => 2,
+                'pemberitahuan' => 'Maaf Anda Tidak Lolos Dari Verifikasi Data.'
             );
             $this->ModelPendaftaran->isVerficationSucces($id_pendaftaran, $data);
         }
