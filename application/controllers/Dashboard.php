@@ -37,7 +37,7 @@
             $this->load->view('dashboard/layout/footer');
         }
         public function verifikasi_student(){
-
+            
             $data = array(
                 'title' => 'Verifikasi Dokumen',
                 'data_verifikasistudent' => $this->ModelSiswa->getDataVerifikasiSiswa(),
