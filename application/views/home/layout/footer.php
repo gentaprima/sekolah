@@ -37,6 +37,7 @@
 <script src="<?= base_url() ?>assets/home/js/magnific-popup.min.js"></script>
 <script src="<?= base_url() ?>assets/home/js/wow.min.js"></script>
 <script src="<?= base_url() ?>assets/alert.js"></script>
+
 <script>
    pesan = document.getElementById('pesan');
    if (pesan != null) {

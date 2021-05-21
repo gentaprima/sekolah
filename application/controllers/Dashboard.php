@@ -75,4 +75,28 @@
             $this->load->view('dashboard/kuota/v_kuota');
             $this->load->view('dashboard/layout/footer');
     }
+    public function data_jadwal (){
+        $data = array(
+            'title' => 'Data Jadwal',
+            'active_jadwal' => 'active'
+        );
+
+        $this->load->view('dashboard/layout/header',$data);
+        $this->load->view('dashboard/layout/sidebar');
+        $this->load->view('dashboard/layout/navbar');
+        $this->load->view('dashboard/testertulis/v_jadwal');
+        $this->load->view('dashboard/layout/footer');
+}
+public function data_hasil (){
+    $data = array(
+        'title' => 'Data Hasil',
+        'active_hasil' => 'active'
+    );
+
+    $this->load->view('dashboard/layout/header',$data);
+    $this->load->view('dashboard/layout/sidebar');
+    $this->load->view('dashboard/layout/navbar');
+    $this->load->view('dashboard/testertulis/v_hasil');
+    $this->load->view('dashboard/layout/footer');
+}
 }
