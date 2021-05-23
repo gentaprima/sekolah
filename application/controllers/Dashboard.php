@@ -8,6 +8,7 @@
             $this->load->model('ModelSiswa');
             $this->load->model('ModelKelas');
             $this->load->model('ModelKuota');
+            $this->load->model('ModelJadwal');
 
             if($this->session->userdata('username') == null || $this->session->userdata('admin') != true){
                 redirect(base_url());
@@ -82,6 +83,7 @@
     public function data_jadwal (){
         $data = array(
             'title' => 'Data Jadwal',
+            'data_jadwal' => $this->ModelJadwal->getData(),
             'active_jadwal' => 'active'
         );
 

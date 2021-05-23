@@ -61,13 +61,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        
+                                        <?php $i=1; foreach($data_jadwal as $row) {?>
                                             <tr>
-                                                <td><center>  </center></td>
-                                                <td><center>  </center></td>
-                                                <td><center>  </center></td>
-                                                <td><center>  </center></td>
-                                                <td><center>  </center></td>
+                                                <td><center><?= $i++; ?></center></td>
+                                                <td><center><?= $row['nis']?></center></td>
+                                                <td><center><?= $row['full_name']?></center></td>
+                                                <td><center><?= $row['tgl_lahir']?></center></td>
+                                                <td><center><?= $row['jenis_kelamin']?></center></td>
                                                 <td><center>  </center></td>
                                                 <td>
                                                 <center>
@@ -78,7 +78,7 @@
                                                </td>
                                                
                                             </tr>
-                                     
+                                     <?php }?>
                                         </tbody>
                                     </table>
                                 </div>
