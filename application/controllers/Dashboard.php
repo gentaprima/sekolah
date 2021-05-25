@@ -86,7 +86,7 @@
             'data_jadwal' => $this->ModelJadwal->getData(),
             'active_jadwal' => 'active'
         );
-
+        
         $this->load->view('dashboard/layout/header',$data);
         $this->load->view('dashboard/layout/sidebar');
         $this->load->view('dashboard/layout/navbar');
