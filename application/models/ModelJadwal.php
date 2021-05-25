@@ -2,8 +2,9 @@
 
 class ModelJadwal extends CI_Model{
     public function getData(){
-        $sql = "SELECT * FROM tbl_siswa,tbl_pendaftaran
+        $sql = "SELECT * FROM tbl_siswa,tbl_pendaftaran,tbl_user
         WHERE
+        tbl_siswa.id_user = tbl_user.id_user AND
         tbl_pendaftaran.nis = tbl_siswa.nis AND
         is_verify = 1
         ";
@@ -11,6 +12,6 @@ class ModelJadwal extends CI_Model{
     }
     public function addData($data)
     {
-        return $this->db->insert('tbl_jadwal', $data);
+        return $this->db->insert('tbl_jadwal',$data);
     }
 }
