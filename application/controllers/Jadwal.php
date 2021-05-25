@@ -5,14 +5,20 @@ Class Jadwal extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('ModelJadwal');
+        $this->load->model('ModelSiswa');
+        $this->load->model('ModelPendaftaran');
     }
 
     public function add_jadwal()
     {
         $id_user = $this->input->post('id_user');
         $jadwal = $this->input->post('jadwal');
+
         
         if($jadwal != null && $id_user != null){
+            $getDataUser = $this->ModelSiswa->getDataUserById($id_user);
+            $nisn = $getDataUser['nis'];
+            $getDataPendaftaran = $this->ModelPendaftaran->getDataHasilByNis($nisn);
 
             $data = array(
                 'jadwal'  => $jadwal,
@@ -20,6 +26,12 @@ Class Jadwal extends CI_Controller{
                 
             );
             $this->ModelJadwal->addData($data);
+
+            $update = array(
+                'pemberitahuan' => 'Jadwal tes tertulis telah keluar, silahkan datangi sekolah pada jadwal yang ditentukan.',
+                'status_pemberitahuan' => '2'
+            );
+            $this->ModelPendaftaran->updateData($update,$nisn);
             $this->session->set_flashdata('type', 'success');
             $this->session->set_flashdata('pesan', 'Berhasil Tambah Data');
             $this->session->set_flashdata('title', 'Berhasil!');
