@@ -49,11 +49,18 @@ Class Home extends CI_Controller{
         $data_siswa = $this->ModelPendaftaran->getDataNisById($id_user);
         $nis = $data_siswa['nis'];
         $checkData = $this->ModelJadwal->getDataJadwal($id_user);
+        if($checkData != null){
+
+            $dataPendaftaran = $this->ModelPendaftaran->getDataHasilByNis($nis);
+        }else{
+            $dataPendaftaran = $this->ModelPendaftaran->getDataHasilAndJadwalByNis($nis);
+
+        }
         $data = array(
 
             "active_hasil" => "active",
             "title" => "Pendaftaran",
-            'data_pendaftaran' => $this->ModelPendaftaran->getDataHasilByNis($nis),
+            'data_pendaftaran' => $dataPendaftaran,
             'jadwal' => $checkData['jadwal']
             
         );

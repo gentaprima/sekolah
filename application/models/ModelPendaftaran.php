@@ -19,7 +19,26 @@ class ModelPendaftaran extends CI_Model
       return $this->db->update('tbl_pendaftaran', $data_sukses, array('id_pendaftaran' => $id));
    }
    public function getDataHasilByNis($nis){
-      return $this->db->get_where('tbl_pendaftaran' , array('nis' => $nis))->row_array();
+      $sql = "SELECT * FROM tbl_siswa,tbl_pendaftaran,tbl_user,tbl_kelas,tbl_jadwal
+                  WHERE
+                  tbl_siswa.id_user = tbl_user.id_user AND
+                  tbl_pendaftaran.nis = tbl_siswa.nis AND
+                  tbl_kelas.id_kelas = tbl_kelas.id_kelas AND
+                  tbl_user.id_user = tbl_jadwal.id_user AND
+                  tbl_pendaftaran.nis = ? ";
+      return $this->db->query($sql,$nis)->row_array();
+      // return $this->db->get_where('tbl_pendaftaran' , array('nis' => $nis))->row_array();
+   }
+
+   public function getDataHasilAndJadwalByNis($nis){
+      $sql = "SELECT * FROM tbl_siswa,tbl_pendaftaran,tbl_user,tbl_kelas,tbl_jadwal
+      WHERE
+      tbl_siswa.id_user = tbl_user.id_user AND
+      tbl_pendaftaran.nis = tbl_siswa.nis AND
+      tbl_kelas.id_kelas = tbl_kelas.id_kelas AND
+      tbl_pendaftaran.nis = ?  GROUP BY tbl_pendaftaran.nis
+      ";
+      return $this->db->query($sql,$nis)->row_array();
    }
 
    public function updateData($data,$id){
