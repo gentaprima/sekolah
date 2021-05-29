@@ -25,6 +25,7 @@ class Konfirmasi extends CI_Controller
             $data_sukses = array(
                 'is_verify' => 1,
                 'pemberitahuan' => 'Selamat Anda Telah Lolos Dari Verfikasi Data, Silahkan Tunggu Jadwal Tes Tertulis.',
+                'status_pemberitahuan' => 1
             );
             $this->ModelPendaftaran->isVerficationSucces($id_pendaftaran, $data_sukses);
         

@@ -14,4 +14,9 @@ class ModelJadwal extends CI_Model{
     {
         return $this->db->insert('tbl_jadwal',$data);
     }
+
+    public function getDataJadwal($id){
+        $sql = "SELECT * FROM tbl_jadwal WHERE id_user = ? ORDER BY id_jadwal DESC";
+        return $this->db->query($sql,$id)->row_array();
+    }
 }

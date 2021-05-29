@@ -21,4 +21,8 @@ Class ModelSiswa extends CI_Model{
                 tbl_kuota.id_kelas = tbl_kelas.id_kelas order by tbl_pendaftaran.id_pendaftaran DESC ";
                 return $this->db->query($sql)->result_array();
     }
+
+    public function getDataUserById($id){
+        return $this->db->get_where('tbl_siswa',array('id_user'=>$id))->row_array();
+    }
 }

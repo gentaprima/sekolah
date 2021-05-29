@@ -21,4 +21,8 @@ class ModelPendaftaran extends CI_Model
    public function getDataHasilByNis($nis){
       return $this->db->get_where('tbl_pendaftaran' , array('nis' => $nis))->row_array();
    }
+
+   public function updateData($data,$id){
+      return $this->db->update('tbl_pendaftaran',$data,array('nis'=>$id));
+   }
 }

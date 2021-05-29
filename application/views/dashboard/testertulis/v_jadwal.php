@@ -100,7 +100,7 @@
                                                     <td>
                                                         <center>
                                                             <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Tambah Jadwal">
-                                                                <button onClick="add_jadwal('<?= base_url() ?>jadwal/add_jadwal','<?= $row['id_user']?>')" data-toggle="modal" data-target="#modaljadwal" type="button" class="btn btn-primary btn-circle btn-icon">
+                                                                <button onClick="add_jadwal('<?= base_url() ?>jadwal/add_jadwal','<?= $row['id_user'] ?>')" data-toggle="modal" data-target="#modaljadwal" type="button" class="btn btn-primary btn-circle btn-icon">
                                                                     <i class="fa fa-calendar"></i></button>
                                                             </span>
                                                     </td>
@@ -125,41 +125,41 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                                <div id="myTabContent" style="margin-top: 30px;" class="tab-content custom-product-edit">
-                                    <div class="product-tab-list tab-pane fade active in" id="description">
-                                        <form action="<?= base_url() ?>jadwal/add_jadwal" method="post">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group row">
+                            <div id="myTabContent" style="margin-top: 30px;" class="tab-content custom-product-edit">
+                                <div class="product-tab-list tab-pane fade active in" id="description">
+                                    <form action="<?= base_url() ?>jadwal/add_jadwal" method="post">
+                                        <div class="row" style="margin-bottom:25px;">
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
                                                     <input type="hidden" name="id_jadwal" id="id_jadwal" class="form-control">
                                                     <input type="hidden" name="id_user" id="id_user" class="form-control">
-                                                        <label for="" class="col-sm-3 col-form-label">Input Jadwal</label>
-                                                        
-                                                        <div class="col-sm-9">
-                                                            <div class="row">
-                                                                <div class="col-sm-11">
-                                                                    <input type="date" value="" required name="jadwal" class="form-control">
-                                                                </div>
+                                                    <label for="" class="col-sm-3 col-form-label">Input Jadwal</label>
+
+                                                    <div class="col-sm-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-11">
+                                                                <input type="date" value="" required name="jadwal" class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                   
                                                 </div>
+
                                             </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="submit" id="button" class="btn btn-primary">Verifikasi Data</button>
-                                        <button type="button" data-dismiss="modal" class="btn btn-default">Keluar</button>
-                                    </div>
-                                    </form>
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" id="button" class="btn btn-primary">Verifikasi Data</button>
+                                    <button type="button" data-dismiss="modal" class="btn btn-default">Keluar</button>
+                                </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
 
             <script>
-                function add_jadwal(base_url,id_user) {
+                function add_jadwal(base_url, id_user) {
                     document.getElementById("modal_title").innerHTML = "Form Tambah Jadwal";
                     document.getElementById("id_jadwal").value = "";
                     document.getElementById("id_user").value = id_user;

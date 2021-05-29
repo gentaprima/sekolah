@@ -6,6 +6,7 @@ Class Home extends CI_Controller{
         parent::__construct();
         $this->load->model('ModelKuota');
         $this->load->model('ModelPendaftaran');
+        $this->load->model('ModelJadwal');
 
     }
     public function index(){
@@ -47,11 +48,14 @@ Class Home extends CI_Controller{
         $id_user = $this->session->userdata('id_user');
         $data_siswa = $this->ModelPendaftaran->getDataNisById($id_user);
         $nis = $data_siswa['nis'];
+        $checkData = $this->ModelJadwal->getDataJadwal($id_user);
         $data = array(
 
             "active_hasil" => "active",
             "title" => "Pendaftaran",
-            'data_pendaftaran' => $this->ModelPendaftaran->getDataHasilByNis($nis)
+            'data_pendaftaran' => $this->ModelPendaftaran->getDataHasilByNis($nis),
+            'jadwal' => $checkData['jadwal']
+            
         );
         $this->load->view('home/layout/header',$data);
         $this->load->view('home/layout/navbar');
