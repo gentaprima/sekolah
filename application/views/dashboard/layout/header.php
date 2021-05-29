@@ -73,4 +73,5 @@
 		============================================ -->
     <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/data-table/bootstrap-table.css">
     <link rel="stylesheet" href="<?= base_url()?>assets/admin/css/data-table/bootstrap-editable.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 </head>

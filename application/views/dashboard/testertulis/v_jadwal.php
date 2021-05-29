@@ -64,11 +64,11 @@
                                                 <th data-field="tgl_lahir">
                                                     <center>Tanggal Lahir</center>
                                                 </th>
-                                                <th data-field="alamat">
-                                                    <center>Alamat</center>
-                                                </th>
                                                 <th data-field="jenis_kelamin">
                                                     <center>Jenis Kelamin</center>
+                                                </th>
+                                                <th data-field="alamat">
+                                                    <center>Kelas Tujuan</center>
                                                 </th>
                                                 <th data-field="action">
                                                     <center>Action</center>
@@ -89,13 +89,13 @@
                                                         <center><?= $row['full_name'] ?></center>
                                                     </td>
                                                     <td>
-                                                        <center><?= $row['tgl_lahir'] ?></center>
-                                                    </td>
-                                                    <td>
-                                                        <center><?= $row['alamat'] ?></center>
+                                                        <center><?= date('d F Y',strtotime($row['tgl_lahir'])) ?></center>
                                                     </td>
                                                     <td>
                                                         <center> <?= $row['jenis_kelamin'] ?></center>
+                                                    </td>
+                                                    <td>
+                                                        <center><?= $row['nama_kelas'] ?></center>
                                                     </td>
                                                     <td>
                                                         <center>

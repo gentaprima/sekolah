@@ -41,86 +41,162 @@
                         </div>
                     </div>
                     <div class="sparkline13-graph">
-                        <div class="datatable-dashv1-list custom-datatable-overright">
-                            <div id="toolbar">
-                                <select class="form-control dt-tb">
-                                    <option value="">Export Basic</option>
-                                    <option value="all">Export All</option>
-                                    <option value="selected">Export Selected</option>
-                                </select>
+                        <div class="product-payment-inner-st res-mg-t-30 analysis-progrebar-ctn">
+                            <ul id="myTabedu1" class="tab-review-design">
+                                <li class="active"><a href="#lolos">Data Verifikasi Siswa Lolos</a></li>
+                                <li class=""><a href="#tidaklolos">Data Verifikasi Siswa Tidak Lolos</a></li>
+                            </ul>
+
+                            <div id="myTabContent" class="tab-content custom-product-edit">
+                                <div class="product-tab-list tab-pane fade active in" id="lolos">
+                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-refresh="true" data-key-events="false" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-toolbar="#toolbar">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="id">
+                                                    <center>No</center>
+                                                </th>
+                                                <th data-field="nisn">
+                                                    <center>NISN</center>
+                                                </th>
+                                                <th data-field="name">
+                                                    <center>Nama Lengkap</center>
+                                                </th>
+                                                <th data-field="kelas">
+                                                    <center>Kelas Tujuan</center>
+                                                </th>
+                                                <th data-field="ortu">
+                                                    <center>Jenis Kelamin</center>
+                                                </th>
+                                                <th data-field="email">
+                                                    <center>Status Dokumen</center>
+                                                </th>
+                                                <th data-field="action">
+                                                    <center>Action</center>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $i = 1;
+                                            foreach ($data_verifikasistudent as $row) { ?>
+                                                <tr>
+                                                    <td>
+                                                        <center><?= $i++; ?></center>
+                                                    </td>
+                                                    <td><?= $row['nis'] ?></td>
+                                                    <td><?= $row['full_name'] ?></td>
+                                                    <td><?= $row['nama_kelas'] ?></td>
+                                                    <td><?= $row['jenis_kelamin'] ?></td>
+                                                    <td>
+                                                        <center>
+                                                            <?php if ($row['is_verify'] == 0) { ?>
+                                                                <span class="badge badge-warning">Belum diperiksa </span>
+                                                            <?php } else if ($row['is_verify'] == 1) { ?>
+                                                                <span class="btn btn-outline-success">Lolos</span>
+                                                            <?php } else if ($row['is_verify'] == 2) { ?>
+                                                                <span class="badge badge-danger">Tidak Lolos</span>
+                                                            <?php } ?>
+                                                        </center>
+                                                    </td>
+                                                    <td>
+                                                        <center>
+                                                            <?php if ($row['is_verify'] == 0) { ?>
+                                                                <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Verifikasi Data">
+                                                                    <button onClick="verifikasi_data('<?= base_url() ?>','<?= $row['nis'] ?>','<?= $row['full_name'] ?>','<?= $row['tgl_lahir'] ?>','<?= $row['jenis_kelamin'] ?>','<?= $row['kota'] ?>','<?= $row['no_telp'] ?>','<?= $row['alamat'] ?>','<?= $row['nilai_mtk'] ?>','<?= $row['nilai_bindo'] ?>','<?= $row['nilai_bingg'] ?>','<?= $row['bukti_nis'] ?>','<?= $row['ijazah'] ?>','<?= $row['id_pendaftaran'] ?>')" data-toggle="modal" data-target="#modalverif" type="button" class="btn btn-outline-success btn-circle btn-icon btn-sm">
+                                                                        <i class="fa fa-check"></i></button>
+                                                                </span>
+                                                            <?php } ?>
+                                                            <?php if ($row['is_verify'] > 0) { ?>
+                                                                <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
+                                                                    <button onClick="" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-outline-info btn-circle btn-icon btn-sm">
+                                                                        <i class="fa fa-book"></i></button>
+                                                                </span>
+                                                            <?php } ?>
+                                                            <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Lihat Detail Siswa">
+                                                                <button onClick="getDetail('<?= $row['nis'] ?>','<?= $row['full_name'] ?>','<?= $row['nama_orangtua'] ?>','<?= $row['jenis_kelamin'] ?>','<?= $row['nama_kelas'] ?>','<?= $row['tgl_lahir'] ?>','<?= $row['alamat'] ?>')" data-toggle="modal" data-target="#modaldetail" type="button" class="btn btn-outline-purple btn-circle btn-icon btn-sm">
+                                                                    <i class="fa fa-user"></i></button>
+                                                            </span>
+                                                        </center>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="product-tab-list tab-pane fade" id="tidaklolos">
+                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-refresh="true" data-key-events="false" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-toolbar="#toolbar">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="id">
+                                                    <center>No</center>
+                                                </th>
+                                                <th data-field="nisn">
+                                                    <center>NISN</center>
+                                                </th>
+                                                <th data-field="name">
+                                                    <center>Nama Lengkap</center>
+                                                </th>
+                                                <th data-field="kelas">
+                                                    <center>Kelas Tujuan</center>
+                                                </th>
+                                                <th data-field="ortu">
+                                                    <center>Jenis Kelamin</center>
+                                                </th>
+                                                <th data-field="email">
+                                                    <center>Status Dokumen</center>
+                                                </th>
+                                                <th data-field="action">
+                                                    <center>Action</center>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php $i = 1;
+                                            foreach ($data_verifikasitidaklolos as $row) { ?>
+                                                <tr>
+                                                    <td>
+                                                        <center><?= $i++; ?></center>
+                                                    </td>
+                                                    <td><?= $row['nis'] ?></td>
+                                                    <td><?= $row['full_name'] ?></td>
+                                                    <td><?= $row['nama_kelas'] ?></td>
+                                                    <td><?= $row['jenis_kelamin'] ?></td>
+                                                    <td>
+                                                        <center>
+                                                            <?php if ($row['is_verify'] == 0) { ?>
+                                                                <span class="badge badge-warning">Belum diperiksa </span>
+                                                            <?php } else if ($row['is_verify'] == 1) { ?>
+                                                                <span class="btn btn-outline-success">Lolos</span>
+                                                            <?php } else if ($row['is_verify'] == 2) { ?>
+                                                                <span class="badge badge-danger">Tidak Lolos</span>
+                                                            <?php } ?>
+                                                        </center>
+                                                    </td>
+                                                    <td>
+                                                        <center>
+                                                            <?php if ($row['is_verify'] == 0) { ?>
+                                                                <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Verifikasi Data">
+                                                                    <button onClick="verifikasi_data('<?= base_url() ?>','<?= $row['nis'] ?>','<?= $row['full_name'] ?>','<?= $row['tgl_lahir'] ?>','<?= $row['jenis_kelamin'] ?>','<?= $row['kota'] ?>','<?= $row['no_telp'] ?>','<?= $row['alamat'] ?>','<?= $row['nilai_mtk'] ?>','<?= $row['nilai_bindo'] ?>','<?= $row['nilai_bingg'] ?>','<?= $row['bukti_nis'] ?>','<?= $row['ijazah'] ?>','<?= $row['id_pendaftaran'] ?>')" data-toggle="modal" data-target="#modalverif" type="button" class="btn btn-outline-success btn-circle btn-icon btn-sm">
+                                                                        <i class="fa fa-check"></i></button>
+                                                                </span>
+                                                            <?php } ?>
+                                                            <?php if ($row['is_verify'] > 0) { ?>
+                                                                <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
+                                                                    <button onClick="" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-outline-info btn-circle btn-icon btn-sm">
+                                                                        <i class="fa fa-book"></i></button>
+                                                                </span>
+                                                            <?php } ?>
+                                                            <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Lihat Detail Siswa">
+                                                                <button onClick="getDetail('<?= $row['nis'] ?>','<?= $row['full_name'] ?>','<?= $row['nama_orangtua'] ?>','<?= $row['jenis_kelamin'] ?>','<?= $row['nama_kelas'] ?>','<?= $row['tgl_lahir'] ?>','<?= $row['alamat'] ?>')" data-toggle="modal" data-target="#modaldetail" type="button" class="btn btn-outline-purple btn-circle btn-icon btn-sm">
+                                                                    <i class="fa fa-user"></i></button>
+                                                            </span>
+                                                        </center>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-refresh="true" data-key-events="false" data-resizable="true" data-cookie="true" data-cookie-id-table="saveId" data-show-export="true" data-toolbar="#toolbar">
-                                <thead>
-                                    <tr>
-                                        <th data-field="id">
-                                            <center>No</center>
-                                        </th>
-                                        <th data-field="nisn">
-                                            <center>NISN</center>
-                                        </th>
-                                        <th data-field="name">
-                                            <center>Nama Lengkap</center>
-                                        </th>
-                                        <th data-field="kelas">
-                                            <center>Kelas Tujuan</center>
-                                        </th>
-                                        <th data-field="ortu">
-                                            <center>Jenis Kelamin</center>
-                                        </th>
-                                        <th data-field="email">
-                                            <center>Status Dokumen</center>
-                                        </th>
-                                        <th data-field="action">
-                                            <center>Action</center>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $i = 1;
-                                    foreach ($data_verifikasistudent as $row) { ?>
-                                        <tr>
-                                            <td>
-                                                <center><?= $i++; ?></center>
-                                            </td>
-                                            <td><?= $row['nis'] ?></td>
-                                            <td><?= $row['full_name'] ?></td>
-                                            <td><?= $row['nama_kelas'] ?></td>
-                                            <td><?= $row['jenis_kelamin'] ?></td>
-                                            <td>
-                                                <center>
-                                                    <?php if ($row['is_verify'] == 0) { ?>
-                                                        <span class="badge badge-warning">Belum diperiksa </span>
-                                                    <?php } else if ($row['is_verify'] == 1) { ?>
-                                                        <span class="btn btn-outline-success">Lolos</span>
-                                                    <?php } else if ($row['is_verify'] == 2) { ?>
-                                                        <span class="badge badge-danger">Tidak Lolos</span>
-                                                    <?php } ?>
-                                                </center>
-                                            </td>
-                                            <td>
-                                                <center>
-                                                    <?php if ($row['is_verify'] == 0) { ?>
-                                                        <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Verifikasi Data">
-                                                            <button onClick="verifikasi_data('<?= base_url() ?>','<?= $row['nis'] ?>','<?= $row['full_name'] ?>','<?= $row['tgl_lahir'] ?>','<?= $row['jenis_kelamin'] ?>','<?= $row['kota'] ?>','<?= $row['no_telp'] ?>','<?= $row['alamat'] ?>','<?= $row['nilai_mtk'] ?>','<?= $row['nilai_bindo'] ?>','<?= $row['nilai_bingg'] ?>','<?= $row['bukti_nis'] ?>','<?= $row['ijazah'] ?>','<?= $row['id_pendaftaran'] ?>')" data-toggle="modal" data-target="#modalverif" type="button" class="btn btn-outline-success btn-circle btn-icon btn-sm">
-                                                                <i class="fa fa-check"></i></button>
-                                                        </span>
-                                                    <?php } ?>
-                                                    <?php if ($row['is_verify'] > 0) { ?>
-                                                        <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
-                                                            <button onClick="" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-outline-info btn-circle btn-icon btn-sm">
-                                                                <i class="fa fa-book"></i></button>
-                                                        </span>
-                                                    <?php } ?>
-                                                    <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Lihat Detail Siswa">
-                                                        <button onClick="getDetail('<?= $row['nis'] ?>','<?= $row['full_name'] ?>','<?= $row['nama_orangtua'] ?>','<?= $row['jenis_kelamin'] ?>','<?= $row['nama_kelas'] ?>','<?= $row['tgl_lahir'] ?>','<?= $row['alamat'] ?>')" data-toggle="modal" data-target="#modaldetail" type="button" class="btn btn-outline-purple btn-circle btn-icon btn-sm">
-                                                            <i class="fa fa-user"></i></button>
-                                                    </span>
-                                                </center>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
@@ -433,7 +509,7 @@
         document.getElementById('alamat').innerHTML = alamat;
     }
 
-    function verifikasi_data(base_url, nis, nama, tgl_lhir, jenis_kelamin, kota, no_tlp, alamat, mtk, indo, inggris, foto_nis, ijazah,id_user) {
+    function verifikasi_data(base_url, nis, nama, tgl_lhir, jenis_kelamin, kota, no_tlp, alamat, mtk, indo, inggris, foto_nis, ijazah, id_user) {
         document.getElementById('nis').value = nis;
         document.getElementById('full_name').value = nama;
         document.getElementById('tgl_lahir').value = tgl_lhir;
