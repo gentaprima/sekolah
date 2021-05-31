@@ -47,6 +47,7 @@ class Dashboard extends CI_Controller
         $data = array(
             'title' => 'Verifikasi Dokumen',
             'data_verifikasistudent' => $this->ModelSiswa->getDataVerifikasiSiswa(),
+            'data_verifikasilolos' => $this->ModelSiswa->getDataVerifikasiSiswaLolos(),
             'data_verifikasitidaklolos' => $this->ModelSiswa->getDataVerifikasiSiswaTidakLolos(),
             'active_verifikasi'    => "active"
         );
