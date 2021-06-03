@@ -50,4 +50,7 @@ class ModelSiswa extends CI_Model
     {
         return $this->db->get_where('tbl_siswa', array('id_user' => $id))->row_array();
     }
+    public function delete_siswa($id_user){
+        return $this->db->delete('tbl_siswa', array('id_user'=> $id_user));
+    }
 }
