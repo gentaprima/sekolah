@@ -109,6 +109,7 @@
 		============================================ -->
 <script src="<?= base_url() ?>assets/admin/kuota.js"></script>
 <script src="<?= base_url() ?>assets/admin/kelas.js"></script>
+<script src="<?= base_url() ?>assets/admin/siswa.js"></script>
 <script src="<?= base_url() ?>assets/alert.js"></script>
 <script>
   pesan = document.getElementById('pesan');
