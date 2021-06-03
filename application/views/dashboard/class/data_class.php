@@ -74,11 +74,11 @@
                                             <td>
                                                 <center>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Edit Data">
-                                                        <button onClick="edit_class('<?= base_url() ?>kelas/edit_class','<?= $row['id_kelas'] ?>','<?= $row['nama_kelas']?>')" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-primary btn-circle btn-icon">
+                                                        <button onClick="edit_class('<?= base_url() ?>kelas/edit_class','<?= $row['id_kelas'] ?>','<?= $row['nama_kelas']?>')" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-outline-info btn-circle btn-icon btn-sm">
                                                             <i class="fa fa-edit"></i></button>
                                                     </span>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
-                                                        <button onClick="delete_class('<?= base_url() ?>kelas/delete_class/<?= $row['id_kelas'] ?>')" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-danger btn-circle btn-icon">
+                                                        <button onClick="delete_kelas('<?= base_url() ?>kelas/delete_kelas/<?= $row['id_kelas'] ?>')" data-toggle="modal" data-target="#modal_delete" type="button" style="border-color:red;" class="btn btn-outline-primary btn-circle btn-icon btn-sm">
                                                             <i class="fa fa-trash"></i></button>
                                                     </span>
                                                 </center>
