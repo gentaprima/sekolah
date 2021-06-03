@@ -41,7 +41,7 @@ class ModelSiswa extends CI_Model
         tbl_siswa.id_user = tbl_user.id_user and
         tbl_pendaftaran.nis = tbl_siswa.nis and
         tbl_pendaftaran.id_kelas = tbl_kelas.id_kelas and
-        is_verify = 3 and
+        is_verify = 2 and
         tbl_kuota.id_kelas = tbl_kelas.id_kelas order by tbl_pendaftaran.id_pendaftaran DESC ";
         return $this->db->query($sql)->result_array();
     }

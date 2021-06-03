@@ -105,13 +105,13 @@
                                                     <td>
                                                         <center>
                                                             <?php
-                                                                $date = getDatesFromRange(date('Y-m-d'),$row['jadwal']);
+                                                                $date = getDatesFromRange($row['jadwal'],date('Y-m-d'));
                                                             ?>
                                                             <?php if ($row['status_pemberitahuan'] == 2) { ?>
                                                                 <?php if(count($date) > 1){ ?>
-                                                                <span class="badge badge-warning">Belum Dinilai</span>
-                                                                <?php }else{ ?>
                                                                 <span class="badge badge-danger">Diskualifikasi/Gagal</span>
+                                                                <?php }else{ ?>
+                                                                <span class="badge badge-warning">Belum Dinilai</span>
                                                                 <?php } ?>
                                                             <?php } else if($row['status_pemberitahuan' == 3]) { ?>
                                                                 <span class="badge badge-success">Sudah Tes</span>

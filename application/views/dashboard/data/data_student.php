@@ -75,12 +75,12 @@
                                             <td><?= $row['full_name'] ?></td>
                                             <td>
                                                 <center>
-                                                    <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Edit Data">
-                                                        <button onClick="" data-toggle="modal" data-target="#modaltambah" type="button" class="btn btn-outline-success btn-circle btn-icon btn-sm">
-                                                            <i class="fa fa-pencil"></i></button>
+                                                    <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Lihat Detail Siswa">
+                                                        <button onClick="getDetail('<?= $row['nis'] ?>','<?= $row['full_name'] ?>')" data-toggle="modal" data-target="#modaldetail" type="button" class="btn btn-outline-purple btn-circle btn-icon btn-sm">
+                                                            <i class="fa fa-user"></i></button>
                                                     </span>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
-                                                        <button onClick="delete_siswa('<?= base_url()?>siswa/delete_siswa/<?= $row['id_user']?>')" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-outline-info btn-circle btn-icon btn-sm">
+                                                        <button onClick="delete_siswa('<?= base_url() ?>siswa/delete_siswa/<?= $row['id_user'] ?>')" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-outline-info btn-circle btn-icon btn-sm">
                                                             <i class="fa fa-trash"></i></button>
                                                     </span>
                                                 </center>
@@ -113,6 +113,59 @@
             <div class="modal-footer">
                 <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <a id="buttondelete" class="btn btn-primary">Hapus Data</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modaldetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal_title">Detail Data Siswa</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- <span aria-hidden="true">&times;</span> -->
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid mt-4" style="margin-top:20px;margin-bottom:20px;">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <img style="width: 250px;heigth:auto;" src="<?= base_url() ?>assets/admin/user.png" class="btn-circle" alt="">
+                        </div>
+                        <?php foreach ($data_student as $row) { ?>
+                        <div class="col-lg-7">
+                            <div class="row">
+                                <div class="col-lg-6"><span>NISN</span></div>
+                                <div class="col-lg-6"> : <?= $row['nis'] ?><span class="font-bold" id="nisn"></span></div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-lg-6"><span>Nama Lengkap</span></div>
+                                <div class="col-lg-6"> : <?= $row['full_name'] ?> <span class="font-bold" id="nama"></span></div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-lg-6"><span>Nama Orangtua</span></div>
+                                <div class="col-lg-6"> : <?= $row['nama_orangtua'] ?> <span class="font-bold" id="orangtua"></span></div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-lg-6"><span>Jenis Kelamin</span></div>
+                                <div class="col-lg-6"> : <?= $row['jenis_kelamin'] ?> <span class="font-bold" id="jk"></span></div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-lg-6"><span>Tanggal Lahir</span></div>
+                                <div class="col-lg-6"> : <?= $row['tgl_lahir'] ?> <span class="font-bold" id="tgl_lahir"></span></div>
+                            </div>
+                            <div class="row mt-6">
+                                <div class="col-lg-6"><span>Alamat</span></div>
+                                <div class="col-lg-6"> : <?= $row['alamat'] ?> <span class="font-bold" id="alamat"></span></div>
+                            </div>
+
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" id="button" data-dismiss="modal" class="btn btn-primary">Keluar</button>
             </div>
         </div>
     </div>
