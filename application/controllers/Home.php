@@ -61,7 +61,8 @@ Class Home extends CI_Controller{
             "active_hasil" => "active",
             "title" => "Pendaftaran",
             'data_pendaftaran' => $dataPendaftaran,
-            'jadwal' => $checkData['jadwal']
+            'jadwal' => $checkData['jadwal'],
+            'check_jadwal' => $checkData
             
         );
         $this->load->view('home/layout/header',$data);
