@@ -17,10 +17,20 @@ class Dashboard extends CI_Controller
         }
     }
     public function index()
-    {
+    {   
+        $lolos = $this->ModelSiswa->getDataVerifikasiSiswaLolos();
+        $tidakLolos = $this->ModelSiswa->getDataVerifikasiSiswaTidakLolos();
+        $kuotaKelas1 = $this->ModelKelas->getDataKelas(1);
+        $kuotaKelas2 = $this->ModelKelas->getDataKelas(2);
+        $kuotaKelas3 = $this->ModelKelas->getDataKelas(3);
         $data = [
             'title' => 'Dashboard',
-            'active_home'   => 'active'
+            'active_home'   => 'active',
+            'lolos' => count($lolos),
+            'tidak_lolos' => count($tidakLolos),
+            'kelas1' => $kuotaKelas1['jumlah_kuota'],
+            'kelas2' => $kuotaKelas2['jumlah_kuota'],
+            'kelas3' => $kuotaKelas3['jumlah_kuota'],
         ];
         $this->load->view('dashboard/layout/header', $data);
         $this->load->view('dashboard/layout/sidebar');
