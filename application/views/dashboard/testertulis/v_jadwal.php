@@ -99,7 +99,7 @@
                                                     </td>
                                                     <td>
                                                         <center>
-                                                            <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Tambah Jadwal">
+                                                            <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Atur Jadwal">
                                                                 <button onClick="add_jadwal('<?= base_url() ?>jadwal/add_jadwal','<?= $row['id_user'] ?>')" data-toggle="modal" data-target="#modaljadwal" type="button" class="btn btn-primary btn-circle btn-icon">
                                                                     <i class="fa fa-calendar"></i></button>
                                                             </span>
@@ -148,7 +148,7 @@
                                         </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" id="button" class="btn btn-primary">Verifikasi Data</button>
+                                    <button type="submit" id="button" class="btn btn-primary">Atur Jadwal</button>
                                     <button type="button" data-dismiss="modal" class="btn btn-default">Keluar</button>
                                 </div>
                                 </form>

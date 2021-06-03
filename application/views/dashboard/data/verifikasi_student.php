@@ -92,7 +92,7 @@
                                                             <?php if ($row['is_verify'] == 0) { ?>
                                                                 <span class="badge badge-warning">Belum diperiksa </span>
                                                             <?php } else if ($row['is_verify'] == 1) { ?>
-                                                                <span class="btn btn-outline-success">Lolos</span>
+                                                                <span class="badge badge-success">Lolos</span>
                                                             <?php } else if ($row['is_verify'] == 2) { ?>
                                                                 <span class="badge badge-danger">Tidak Lolos</span>
                                                             <?php } ?>
@@ -166,7 +166,7 @@
                                                             <?php if ($row['is_verify'] == 0) { ?>
                                                                 <span class="badge badge-warning">Belum diperiksa </span>
                                                             <?php } else if ($row['is_verify'] == 1) { ?>
-                                                                <span class="btn btn-outline-success">Lolos</span>
+                                                                <span style="background-color: green;" class="badge badge-success">Lolos</span>
                                                             <?php } else if ($row['is_verify'] == 2) { ?>
                                                                 <span class="badge badge-danger">Tidak Lolos</span>
                                                             <?php } ?>
@@ -240,7 +240,7 @@
                                                             <?php if ($row['is_verify'] == 0) { ?>
                                                                 <span class="badge badge-warning">Belum diperiksa </span>
                                                             <?php } else if ($row['is_verify'] == 1) { ?>
-                                                                <span class="btn btn-outline-success">Lolos</span>
+                                                                <span class="badge badge-success">Lolos</span>
                                                             <?php } else if ($row['is_verify'] == 2) { ?>
                                                                 <span class="badge badge-danger">Tidak Lolos</span>
                                                             <?php } ?>

@@ -28,12 +28,12 @@
                                 <?php } ?>
                                 <?php if (isset($active_student) || isset($active_verifikasi)) { ?>
                                     <a class="has-arrow active" href="">
-                                        <span class="educate-icon educate-home icon-wrap active"></span>
+                                        <span class="educate-icon educate-student icon-wrap active"></span>
                                         <span class="mini-click-non">Mutasi</span>
                                     </a>
                                 <?php } else { ?>
                                     <a class="has-arrow" href="">
-                                        <span class="educate-icon educate-home icon-wrap"></span>
+                                        <span class="educate-icon educate-student icon-wrap"></span>
                                         <span class="mini-click-non">Mutasi</span>
                                     </a>
                                 <?php } ?>
