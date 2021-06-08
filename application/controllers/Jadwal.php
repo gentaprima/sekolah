@@ -33,12 +33,12 @@ Class Jadwal extends CI_Controller{
             );
             $this->ModelPendaftaran->updateData($update,$nisn);
             $this->session->set_flashdata('type', 'success');
-            $this->session->set_flashdata('pesan', 'Berhasil Tambah Data');
+            $this->session->set_flashdata('pesan', 'Berhasil Mengupdate Jadwal Siswa');
             $this->session->set_flashdata('title', 'Berhasil!');
             redirect(base_url('dashboard/data_jadwal'));
         }else{
             $this->session->set_flashdata('type', 'warning');
-            $this->session->set_flashdata('pesan', 'Tidak Boleh Kosong!');
+            $this->session->set_flashdata('pesan', ' Jadwal Tidak Boleh Kosong!');
             $this->session->set_flashdata('title', 'Gagal!');
             redirect(base_url('dashboard/data_jadwal'));
         }
