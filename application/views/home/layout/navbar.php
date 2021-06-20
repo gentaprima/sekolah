@@ -51,11 +51,7 @@
                         <li class=""><a href="<?= base_url() ?>home/kuota_mutasi">Kuota Mutasi</a></li>
                     <?php } ?>
                     <?php if ($this->session->userdata('username') != null && $this->session->userdata('admin') == false) { ?>
-                        <?php if (isset($active_biodata)) { ?>
-                            <li class="active"><a href="">Biodata</a></li>
-                        <?php } else { ?>
-                            <li class=""><a href="">Biodata</a></li>
-                        <?php } ?>
+                        
                     <?php } ?>
                     <?php if ($this->session->userdata('username') != null && $this->session->userdata('admin') == false) { ?>
                         <?php if (isset($active_hasil)) { ?>

@@ -14,4 +14,8 @@ Class ModelKelas extends CI_Model{
     public function deleteData($id_kelas){
         return $this->db->delete('tbl_kelas', array('id_kelas' => $id_kelas));
     }
+
+    public function getDataKelas($kelas){
+        return $this->db->get_where('tbl_kuota',['id_kelas' => $kelas])->row_array();
+    }
 }
