@@ -80,7 +80,7 @@
                                                             <i class="fa fa-user"></i></button>
                                                     </span>
                                                     <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Hapus Data">
-                                                        <button onClick="delete_siswa('<?= base_url() ?>siswa/delete_siswa/<?= $row['id_user'] ?>')" data-toggle="modal" data-target="#modal_delete" type="button" class="btn btn-outline-info btn-circle btn-icon btn-sm">
+                                                        <button onClick="delete_siswa('<?= base_url() ?>siswa/delete_siswa/<?= $row['id_user'] ?>')" data-toggle="modal" data-target="#modal_delete" type="button"  style="border-color:red;" class="btn btn-outline-danger btn-circle btn-icon btn-sm">
                                                             <i class="fa fa-trash"></i></button>
                                                     </span>
                                                 </center>
