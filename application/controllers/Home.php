@@ -20,7 +20,12 @@ Class Home extends CI_Controller{
         $this->load->view('home/layout/footer');
     }
     public function pendaftaran(){
-
+        if($this->session->userdata('username') == null) {
+            $this->session->set_flashdata("pesan", "Silahkan Login Terlebih Dahulu");
+            $this->session->set_flashdata("title", "Gagal!!");
+            $this->session->set_flashdata("type", "warning");
+            redirect(base_url());
+        }
         $data = array(
 
             "active_pendaftaran" => "active",

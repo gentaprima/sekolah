@@ -187,7 +187,7 @@
                                                                 </span>
                                                             <?php } ?>
                                                             <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Lihat Detail Siswa">
-                                                                <button onClick="getDetail('<?= $row['nis'] ?>','<?= $row['full_name'] ?>','<?= $row['nama_orangtua'] ?>','<?= $row['jenis_kelamin'] ?>','<?= $row['nama_kelas'] ?>','<?= $row['tgl_lahir'] ?>','<?= $row['alamat'] ?>')" data-toggle="modal" data-target="#modaldetail" type="button" class="btn btn-outline-purple btn-circle btn-icon btn-sm">
+                                                                <button onClick="getDetail('<?= $row['nis'] ?>','<?= $row['full_name'] ?>','<?= $row['nama_orangtua'] ?>','<?= $row['jenis_kelamin'] ?>','<?= $row['nama_kelas'] ?>','<?= $row['tgl_lahir'] ?>','<?= $row['alamat'] ?>','<?= $row['foto_siswa']?>','<?= base_url()?>')" data-toggle="modal" data-target="#modaldetail" type="button" class="btn btn-outline-purple btn-circle btn-icon btn-sm">
                                                                     <i class="fa fa-user"></i></button>
                                                             </span>
                                                         </center>
@@ -293,7 +293,7 @@
                 <div class="container-fluid mt-4" style="margin-top:20px;margin-bottom:20px;">
                     <div class="row">
                         <div class="col-lg-5">
-                            <img style="width: 250px;heigth:auto;" src="<?= base_url() ?>assets/admin/user.png" class="btn-circle" alt="">
+                            <img style="width: 250px;heigth:auto;" src="<?= base_url() ?>assets/admin/user.png" id="foto_siswa" class="btn-circle" alt="">
                         </div>
                         <div class="col-lg-7">
                             <div class="row">
@@ -539,7 +539,7 @@
                                 <div class="col-sm-10">
                                     <div class="row">
                                         <div class="col-sm-11">
-                                            <a href="" id="foto_kk">Lihat bukti kartu keluarga</a>
+                                            <a href="" target="_blank" id="foto_kk">Lihat bukti kartu keluarga</a>
                                         </div>
                                         <div class="col-sm-1">
                                             <input name="check_kk" type="checkbox" aria-label="Checkbox for following text input">
@@ -552,7 +552,7 @@
                                 <div class="col-sm-10">
                                     <div class="row">
                                         <div class="col-sm-11">
-                                            <a href="" id="foto_akte">Lihat bukti akte kelahiran</a>
+                                            <a target="_blank" href="" id="foto_akte">Lihat bukti akte kelahiran</a>
                                         </div>
                                         <div class="col-sm-1">
                                             <input name="check_akte" type="checkbox" aria-label="Checkbox for following text input">
@@ -815,7 +815,8 @@
 
 
 <script>
-    function getDetail(nisn, nama, orangtua, jk, kelas, tgl_lahir, alamat) {
+    function getDetail(nisn, nama, orangtua, jk, kelas, tgl_lahir, alamat,foto,base_url) {
+        document.getElementById('foto_siswa').src = base_url + "assets/home/bukti/" + foto;
         document.getElementById('nisn').innerHTML = nisn;
         document.getElementById('nama').innerHTML = nama;
         document.getElementById('orangtua').innerHTML = orangtua;
