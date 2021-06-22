@@ -143,7 +143,24 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                                <div class="form-group row">
+                                                    <label for="" class="col-sm-3 col-form-label">Input Jam</label>
+                                                
+                                                    <div class="col-sm-9">
+                                                        <div class="row">
+                                                            <div class="col-sm-11">
+                                                            <select type="text" required name="jam" class="form-control">
+                                                            <option value="1">--Pilih Jam--</option>
+                                                            <option value="08:00 - 10:00">08:00 - 10:00</option>
+                                                            <option value="10:00 - 12:00">10:00 - 12:00</option>
+                                                            <option value="12:00 - 14:00">12:00 - 14:00</option>
+                                                            <option value="14:00 - 16:00">14:00 - 16:00</option>
+                                                            </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                
+                                                </div>
                                             </div>
                                         </div>
                                 </div>

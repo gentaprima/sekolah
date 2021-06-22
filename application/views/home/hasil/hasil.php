@@ -19,9 +19,9 @@
                 <div class="page-title text-center">
                     <?php if ($check_jadwal != null) { ?>
                         <?php
-                        $date = getDatesFromRange(date('Y-m-d'), $data_pendaftaran['jadwal']);
+                        $date = getDatesFromRange(date('Y-m-d'),$data_pendaftaran['jadwal']);
                         ?>
-                        <?php if (count($date) > 1) { ?>
+                        <?php if ((count($date) - 1) >= 0) { ?>
                             <?php if ($data_pendaftaran['status_pemberitahuan'] > 0) { ?>
                                 <div class="alert alert-success" role="alert">
                                     <!-- A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like. -->
@@ -53,7 +53,7 @@
                         <?php } else if ($data_pendaftaran['status_pemberitahuan'] == 1) { ?>
                             <p> <b>Selamat!</b> Anda telah lolos tahap verifikasi data. <br> Jadwal tes tertulis akan dikirimkan paling lambat 3 hari setelah verifikasi data. </p>
                         <?php } else if ($data_pendaftaran['status_pemberitahuan'] == 2) { ?>
-                            <p> <b>Segera!</b> datang ke sekolah pada tanggal <b> <?= date('d F Y', strtotime($jadwal)) ?> </b> untuk mengikuti tes tertulis. <br> Jika calon siswa tidak mengikuti tes tertulis pada jadwal yang telah ditentukan maka calon siswa dianggap <b>gagal</b>.</p>
+                            <p> <b>Segera!</b> datang ke sekolah pada tanggal <b> <?= date('d F Y', strtotime($jadwal)) ?> </b> Jam <b> <?= $data_pendaftaran['jam'] ?></b> untuk mengikuti tes tertulis dan wawancara. <br> Jika calon siswa tidak mengikuti tes tertulis pada jadwal yang telah ditentukan maka calon siswa dianggap <b>gagal</b>.</p>
                         <?php } ?>
                     </div>
                     <h3>Hasil Tes Tertulis</h3>

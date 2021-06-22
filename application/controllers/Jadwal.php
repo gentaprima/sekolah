@@ -13,6 +13,7 @@ Class Jadwal extends CI_Controller{
     {
         $id_user = $this->input->post('id_user');
         $jadwal = $this->input->post('jadwal');
+        $jam = $this->input->post('jam');
 
         
         if($jadwal != null && $id_user != null){
@@ -23,13 +24,13 @@ Class Jadwal extends CI_Controller{
             $data = array(
                 'jadwal'  => $jadwal,
                 'id_user'  => $id_user,
-                
+                'jam'   => $jam
             );
             $this->ModelJadwal->addData($data);
 
             $update = array(
                 'pemberitahuan' => 'Jadwal tes tertulis telah keluar, silahkan datangi sekolah pada jadwal yang ditentukan.',
-                'status_pemberitahuan' => '2'
+                'status_pemberitahuan' => 2
             );
             $this->ModelPendaftaran->updateData($update,$nisn);
             $this->session->set_flashdata('type', 'success');

@@ -21,4 +21,15 @@ class ModelHasil extends CI_Model{
         $sql = "SELECT * FROM tbl_jadwal WHERE id_user = ? ORDER BY id_jadwal DESC";
         return $this->db->query($sql,$id)->row_array();
     }
+
+    public function insertPenilian($data){
+        return $this->db->insert('tbl_penilaian',$data);
+    }
+    public function getDataNormalisasi(){
+        $sql = "SELECT * FROM tbl_pendaftaran,tbl_penilaian,tbl_siswa
+                WHERE 
+                tbl_penilaian.id_pendaftaran = tbl_pendaftaran.id_pendaftaran and
+                tbl_pendaftaran.nis = tbl_siswa.nis";
+                return $this->db->query($sql)->result_array();
+    }
 }

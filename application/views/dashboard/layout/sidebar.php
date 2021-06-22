@@ -73,11 +73,11 @@
                                         <?php }else{?>
                                             <li class=""><a href="<?= base_url() ?>dashboard/data_jadwal"><span class="mini-sub-pro">Jadwal</span></a></li>
                                         <?php } ?>
-                                        <?php if(isset($active_wawancara)) { ?> 
+                                        <!-- <?php if(isset($active_wawancara)) { ?> 
                                         <li class="active"><a href="<?= base_url() ?>dashboard/data_wawancara"><span class="mini-sub-pro">Wawancara</span></a></li>
                                         <?php }else{ ?>
                                             <li class=""><a href="<?= base_url() ?>dashboard/data_wawancara"><span class="mini-sub-pro">Wawancara</span></a></li>
-                                        <?php } ?>
+                                        <?php } ?> -->
                                         <?php if (isset($active_hasil)) { ?>
                                         <li class="active"><a href="<?= base_url() ?>dashboard/data_hasil"><span class="mini-sub-pro">Hasil</span></a></li>
                                         <?php }else{ ?>
@@ -85,7 +85,51 @@
                                         <?php } ?>
                                     </ul>
                                 </li>
+                                <?php if (isset($active_normalisasi) || isset($active_akhir)) { ?>
+                                <li class="active">
+                                <?php } else { ?>
+                                <li class="">
+                                <?php } ?>
+                                <?php if (isset($active_normalisasi) || isset($active_akhir)) { ?>
+                                    <a class="has-arrow active" href="">
+                                        <span class="educate-icon educate-home icon-wrap active"></span>
+                                        <span class="mini-click-non">Tes Tertulis</span>
+                                    </a>
+                                    <?php }else{ ?>
+                                        <a class="has-arrow" href="">
+                                        <span class="educate-icon educate-home icon-wrap"></span>
+                                        <span class="mini-click-non">Penilaian</span>
+                                    </a>
+                                    <?php } ?>
+                                    <ul class="submenu-angle" aria-expanded="true">
+                                        <?php if (isset($active_normalisasi)) { ?>
+                                        <li class="active"><a href="<?= base_url() ?>dashboard/data_normalisasi"><span class="mini-sub-pro">Normalisasi</span></a></li>
+                                        <?php }else{?>
+                                            <li class=""><a href="<?= base_url() ?>dashboard/data_normalisasi"><span class="mini-sub-pro">Normalisasi</span></a></li>
+                                        <?php } ?>
+                                        
+                                        <?php if (isset($active_akhir)) { ?>
+                                        <li class="active"><a href="<?= base_url() ?>dashboard/data_akhir"><span class="mini-sub-pro">Hasil Akhir</span></a></li>
+                                        <?php }else{ ?>
+                                            <li class=""><a href="<?= base_url() ?>dashboard/data_akhir"><span class="mini-sub-pro">Hasil Akhir</span></a></li>
+                                        <?php } ?>
+                                    </ul>
+                                </li>
                                 <a><span class="mini-sub-pro">Lain - Lain</span></a>
+
+                                <li>
+                                <?php if(isset($active_kriteria)){ ?> 
+                                <a class="active" title="Landing Page" href="<?= base_url() ?>dashboard/kriteria" aria-expanded="false">
+                                            <span class="educate-icon educate-event icon-wrap sub-icon-mg " aria-hidden="true"></span>
+                                            <span class="mini-click-non">Data Kriteria</span>
+                                        </a>
+                                        <?php }else{  ?>
+                                            <a class="" title="Landing Page" href="<?= base_url() ?>dashboard/kriteria" aria-expanded="false">
+                                            <span class="educate-icon educate-event icon-wrap sub-icon-mg " aria-hidden="true"></span>
+                                            <span class="mini-click-non">Data Kriteria</span>
+                                        </a>
+                                        <?php } ?>
+                                </li>
 
                                 <li>
                                     <?php if (isset($active_class)) { ?>
@@ -100,6 +144,7 @@
                                         </a>
                                     <?php } ?>
                                 </li>
+                                
                                 <li>
                                     <?php if (isset($active_kuota)) { ?>
                                         <a class="active" title="Landing Page" href="<?= base_url() ?>dashboard/kuota_mutasi" aria-expanded="false">

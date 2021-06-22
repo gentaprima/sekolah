@@ -11,6 +11,7 @@ class Dashboard extends CI_Controller
         $this->load->model('ModelKuota');
         $this->load->model('ModelJadwal');
         $this->load->model('ModelHasil');
+        $this->load->model('ModelKriteria');
 
         if ($this->session->userdata('username') == null || $this->session->userdata('admin') != true) {
             redirect(base_url());
@@ -67,6 +68,23 @@ class Dashboard extends CI_Controller
         $this->load->view('dashboard/layout/navbar');
         $this->load->view('dashboard/data/verifikasi_student');
         $this->load->view('dashboard/layout/footer');
+    }
+    public function kriteria(){
+
+        $data = array(
+            'title' => 'Data Kriteria',
+            'active_class' => 'active',
+            'data_kriteria' => $this->ModelKriteria->getDataKriteria(),
+
+        );
+        // var_dump($data['data_kriteria'][0]['kriteria']);die;
+
+        $this->load->view('dashboard/layout/header', $data);
+        $this->load->view('dashboard/layout/sidebar');
+        $this->load->view('dashboard/layout/navbar');
+        $this->load->view('dashboard/kriteria/data_kriteria');
+        $this->load->view('dashboard/layout/footer');
+
     }
 
     public function data_class()
@@ -129,7 +147,7 @@ class Dashboard extends CI_Controller
     {
         $data = array(
             'title' => 'Data Hasil',
-            'data_hasil' => $this->ModelJadwal->getDataByStatus(2),
+            'data_hasil' => $this->ModelJadwal->getDataHasilBy2Status(2),
             'active_hasil' => 'active'
         );
         $this->load->view('dashboard/layout/header', $data);
@@ -153,5 +171,33 @@ class Dashboard extends CI_Controller
         }
     
         return $array;
+    }
+    public function data_normalisasi()
+    {
+        $data = array(
+            'title' => 'Data Normalisasi',
+            'active_normalisasi' => 'active',
+            'data_normalisasi' => $this->ModelHasil->getDataNormalisasi()
+        );
+      
+        $this->load->view('dashboard/layout/header', $data);
+        $this->load->view('dashboard/layout/sidebar');
+        $this->load->view('dashboard/layout/navbar');
+        $this->load->view('dashboard/penilaian/data_normalisasi');
+        $this->load->view('dashboard/layout/footer');
+    }
+    public function data_akhir()
+    {
+        $data = array(
+            'title' => 'Data Hasil Akhir',
+            'active_hasilakhir' => 'active',
+           
+        );
+      
+        $this->load->view('dashboard/layout/header', $data);
+        $this->load->view('dashboard/layout/sidebar');
+        $this->load->view('dashboard/layout/navbar');
+        $this->load->view('dashboard/penilaian/data_akhir');
+        $this->load->view('dashboard/layout/footer');
     }
 }

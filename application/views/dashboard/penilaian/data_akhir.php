@@ -16,7 +16,7 @@
                             <ul class="breadcome-menu">
                                 <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                 </li>
-                                <li><span class="bread-blod">Data Hasil</span>
+                                <li><span class="bread-blod">Data Hasil Akhir</span>
                                 </li>
                             </ul>
                         </div>
@@ -35,7 +35,7 @@
                 <div class="sparkline13-list">
                     <div class="sparkline13-hd">
                         <div class="main-sparkline13-hd">
-                            <h1><span class="table-project-n">Data</span> Hasil</h1>
+                            <h1><span class="table-project-n">Data</span> Hasil Akhir</h1>
                         </div>
                     </div>
                     <div class="sparkline13-graph">
@@ -55,88 +55,50 @@
                                                 <th data-field="id">
                                                     <center>No</center>
                                                 </th>
-                                                <th data-field="nis">
-                                                    <center>NIS</center>
-                                                </th>
                                                 <th data-field="full_name">
                                                     <center>Nama Siswa</center>
                                                 </th>
-                                                <th data-field="jenis_kelamin">
-                                                    <center>Jenis Kelamin</center>
-                                                </th>
-                                                <th data-field="jadwal">
-                                                    <center>Jadwal</center>
-                                                </th>
-                                                <th data-field="alamat">
-                                                    <center>Kelas Tujuan</center>
-                                                </th>
-                                                <th data-field="status">
+                                                <th data-field="full_name">
                                                     <center>Status</center>
                                                 </th>
+                                                
                                                 <th data-field="action">
                                                     <center>Action</center>
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php $i = 1;
-                                            foreach ($data_hasil as $row) { ?>
+                                          
                                                 <tr>
                                                     <td>
-                                                        <center><?= $i++; ?></center>
+                                                        <center></center>
                                                     </td>
                                                     <td>
-                                                        <center><?= $row['nis'] ?></center>
+                                                        <center></center>
                                                     </td>
                                                     <td>
-                                                        <center><?= $row['full_name'] ?></center>
+                                                        <center></center>
                                                     </td>
-                                                    <td>
-                                                        <center> <?= $row['jenis_kelamin'] ?></center>
-                                                    </td>
-                                                    <td>
-                                                        <center>
-                                                       <span class="badge badge-primary"> <?= date('d F Y', strtotime($row['jadwal']))  ?></span>
-                                                        </center>
-                                                    </td>
-                                                    <td>
-                                                        <center><?= $row['nama_kelas'] ?></center>
-                                                    </td>
-                                                    <td>
-                                                        <center>
-                                                            <?php
-                                                                $date = getDatesFromRange(date('Y-m-d'),$row['jadwal']);
-                                                            ?>
-                                                            <?php if ($row['status_pemberitahuan'] == 2) { ?>
-                                                                <?php if(count($date) >= 1){ ?>
-                                                                    <span class="badge badge-warning">Belum Dinilai</span>
-                                                                    <?php }else{ ?>
-                                                                        <span class="badge badge-danger">Diskualifikasi/Gagal</span>
-                                                                <?php } ?>
-                                                            <?php } else if($row['status_pemberitahuan'] == 3) { ?>
-                                                                <span class="badge badge-success">Sudah Dinilai</span>
-                                                            <?php } ?>
-                                                        </center>
-                                                    </td>
+                                                   
                                                     <td>
                                                         <center>
                                                            
-                                                            <?php if ($row['status_pemberitahuan'] == 3) { ?>
+                                                           
                                                                 <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Lihat Hasil">
-                                                                    <button onClick="add_jadwal('<?= base_url() ?>jadwal/add_jadwal','<?= $row['id_user'] ?>')" data-toggle="modal" data-target="#modaljadwal" type="button" class="btn btn-success btn-circle btn-icon">
+                                                                    <button onClick="" data-toggle="modal" data-target="#modaljadwal" type="button" class="btn btn-success btn-circle btn-icon">
                                                                         <i class="fa fa-clipboard"></i></button>
                                                                 </span>
-                                                            <?php }else if(count($date) >= 1){ ?>
+                                                         
                                                                 <span data-toggle="tooltip" data-toggle="tooltip" data-placement="top" title="Input Nilai">
-                                                                    <button onClick="add_jadwal1('<?= base_url() ?>jadwal/add_jadwal','<?= $row['id_user'] ?>')" data-toggle="modal" data-target="#modaljadwal" type="button" class="btn btn-primary btn-circle btn-icon">
+                                                                    <button onClick="" data-toggle="modal" data-target="#modaljadwal" type="button" class="btn btn-primary btn-circle btn-icon">
                                                                         <i class="fa fa-edit"></i></button>
                                                                 </span>
-                                                            <?php } ?> 
+                                 
                                                         </center>
                                                     </td>
 
                                                 </tr>
-                                            <?php } ?>
+                                         
                                         </tbody>
                                     </table>
                                 </div>
@@ -211,30 +173,4 @@
                 </div>
             </div>
 
-            <script>
-                function add_jadwal1(base_url,id_user) {
-                    document.getElementById("modal_title").innerHTML = "Form Penilaian";
-                    document.getElementById("id_user").value = id_user;
-                    document.getElementById("jadwal").value = "";
-                    document.getElementById("button").innerHTML = "Tambah Data";
-                    document.getElementById("form").action = base_url;
-                }
-            </script>
-            <?php
-            function getDatesFromRange($start, $end, $format = 'Y-m-d')
-            {
-                $array = array();
-                $interval = new DateInterval('P1D');
-
-                $realEnd = new DateTime($end);
-                $realEnd->add($interval);
-
-                $period = new DatePeriod(new DateTime($start), $interval, $realEnd);
-
-                foreach ($period as $date) {
-                    $array[] = $date->format($format);
-                }
-
-                return $array;
-            }
-            ?>
+          
