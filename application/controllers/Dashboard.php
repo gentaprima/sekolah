@@ -112,6 +112,19 @@ class Dashboard extends CI_Controller
         $this->load->view('dashboard/testertulis/v_jadwal');
         $this->load->view('dashboard/layout/footer');
     }
+    public function data_wawancara(){
+
+        $data = array(
+            'title' => 'Data Wawancara',
+            'active_wawancara' => 'active'
+        );
+        $this->load->view('dashboard/layout/header', $data);
+        $this->load->view('dashboard/layout/sidebar');
+        $this->load->view('dashboard/layout/navbar');
+        $this->load->view('dashboard/testertulis/v_wawancara');
+        $this->load->view('dashboard/layout/footer');
+
+    }
     public function data_hasil()
     {
         $data = array(

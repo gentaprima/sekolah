@@ -478,7 +478,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group row mt-4">
-                                        <label for="" class="col-sm-3 col-form-label">Nilai Matematika</label>
+                                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah Matematika</label>
                                         <div class="col-sm-9">
                                             <div class="row">
                                                 <div class="col-sm-11">
@@ -494,7 +494,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label">Nilai B.Indonesia</label>
+                                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah B.Indonesia</label>
                                         <div class="col-sm-9">
                                             <div class="row">
                                                 <div class="col-sm-11">
@@ -509,7 +509,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label">Nilai B.Inggris</label>
+                                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah B.Inggris</label>
                                         <div class="col-sm-9">
                                             <div class="row">
                                                 <div class="col-sm-11">
@@ -716,7 +716,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group row mt-4">
-                                        <label for="" class="col-sm-3 col-form-label">Nilai Matematika</label>
+                                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah Matematika</label>
                                         <div class="col-sm-9">
                                             <div class="row">
                                                 <div class="col-sm-11">
@@ -732,7 +732,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label">Nilai B.Indonesia</label>
+                                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah B.Indonesia</label>
                                         <div class="col-sm-9">
                                             <div class="row">
                                                 <div class="col-sm-11">
@@ -747,7 +747,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-form-label">Nilai B.Inggris</label>
+                                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah B.Inggris</label>
                                         <div class="col-sm-9">
                                             <div class="row">
                                                 <div class="col-sm-11">

@@ -73,6 +73,11 @@
                                         <?php }else{?>
                                             <li class=""><a href="<?= base_url() ?>dashboard/data_jadwal"><span class="mini-sub-pro">Jadwal</span></a></li>
                                         <?php } ?>
+                                        <?php if(isset($active_wawancara)) { ?> 
+                                        <li class="active"><a href="<?= base_url() ?>dashboard/data_wawancara"><span class="mini-sub-pro">Wawancara</span></a></li>
+                                        <?php }else{ ?>
+                                            <li class=""><a href="<?= base_url() ?>dashboard/data_wawancara"><span class="mini-sub-pro">Wawancara</span></a></li>
+                                        <?php } ?>
                                         <?php if (isset($active_hasil)) { ?>
                                         <li class="active"><a href="<?= base_url() ?>dashboard/data_hasil"><span class="mini-sub-pro">Hasil</span></a></li>
                                         <?php }else{ ?>
