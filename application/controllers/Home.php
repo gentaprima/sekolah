@@ -5,6 +5,8 @@ Class Home extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('ModelKuota');
+        $this->load->model('ModelPendaftaran');
+        $this->load->model('ModelJadwal');
 
     }
     public function index(){
@@ -18,7 +20,12 @@ Class Home extends CI_Controller{
         $this->load->view('home/layout/footer');
     }
     public function pendaftaran(){
-
+        if($this->session->userdata('username') == null) {
+            $this->session->set_flashdata("pesan", "Silahkan Login Terlebih Dahulu");
+            $this->session->set_flashdata("title", "Gagal!!");
+            $this->session->set_flashdata("type", "warning");
+            redirect(base_url());
+        }
         $data = array(
 
             "active_pendaftaran" => "active",
@@ -43,15 +50,29 @@ Class Home extends CI_Controller{
         $this->load->view('home/layout/footer');
     }
     public function hasil(){
+        $id_user = $this->session->userdata('id_user');
+        $data_siswa = $this->ModelPendaftaran->getDataNisById($id_user);
+        $nis = $data_siswa['nis'];
+        $checkData = $this->ModelJadwal->getDataJadwal($id_user);
+        if($checkData != null){
 
+            $dataPendaftaran = $this->ModelPendaftaran->getDataHasilByNis($nis);
+        }else{
+            $dataPendaftaran = $this->ModelPendaftaran->getDataHasilAndJadwalByNis($nis);
+
+        }
         $data = array(
 
             "active_hasil" => "active",
-            "title" => "Pendaftaran"
+            "title" => "Pendaftaran",
+            'data_pendaftaran' => $dataPendaftaran,
+            'jadwal' => $checkData['jadwal'],
+            'check_jadwal' => $checkData
+            
         );
         $this->load->view('home/layout/header',$data);
         $this->load->view('home/layout/navbar');
-        $this->load->view('home/hasil/hasil/');
+        $this->load->view('home/hasil/hasil');
         $this->load->view('home/layout/footer');
     }
 

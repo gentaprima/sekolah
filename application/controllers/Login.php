@@ -114,4 +114,8 @@ class Login extends CI_Controller
             redirect(base_url('home'));
         }
     }
+    public function logout(){
+        session_destroy();
+        redirect(base_url('home'));
+    }
 }

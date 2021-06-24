@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Nilai Matematika</label>
+                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah Matematika</label>
                         <div class="col-sm-9">
                             <input type="number" value="" id="" required name="nilai_mtk" class="form-control">
                         </div>
@@ -107,13 +107,13 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Nilai B.Indonesia</label>
+                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah B.Indonesia</label>
                         <div class="col-sm-9">
                             <input type="number" value="" id="" required name="nilai_bindo" class="form-control">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Nilai B.Inggris</label>
+                        <label for="" class="col-sm-3 col-form-label">Nilai Ijazah B.Inggris</label>
                         <div class="col-sm-9">
                             <input type="number" value="" id="" required name="nilai_bingg" class="form-control">
                         </div>
